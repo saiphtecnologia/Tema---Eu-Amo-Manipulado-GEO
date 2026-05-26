@@ -4248,7 +4248,7 @@ body.overflowed{
     padding: 0.4375rem 0;
     transition: ease-out 0.2s;
     min-width: 200px;
-    color: var(--color_header_bg);  
+    color: var(--color_header_bg);
 }
 
 .sub-categories .sub-list > li > a:hover{
