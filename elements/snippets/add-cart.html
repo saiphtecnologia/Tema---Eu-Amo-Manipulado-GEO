@@ -1,0 +1,30 @@
+{% if product.available and (product.stock > 0 or settings.without_stock_sale) and not product.upon_request and not product.has_variation %}
+
+    <form class="quick-buy flex add-cart" data-id="{{ product.id }}" data-api-cart="{{ settings.api_cart }}">
+
+        {% element 'snippets/product-quantity' { 'product': product } %}
+
+        <button type="button" class="product-button add-to-cart loading">
+            
+            <div class="loader-button absolute show">
+                <div class="animation dots-animation">
+                    <div class="bounce-one"></div>
+                    <div class="bounce-two"></div>
+                    <div class="bounce-three"></div>
+                </div>
+            </div>
+                    
+            <i class="icon icon-cart"></i>
+            {{ settings.quick_buy_text ? settings.quick_buy_text : 'Adicionar ao carrinho' }}
+
+        </button>
+
+    </form>
+
+{% elseif product.available and (product.stock > 0 or settings.without_stock_sale) and product.has_variation and not product.upon_request %}
+
+    <a class="product-button" href="{{ product.link }}">
+        Ver detalhes
+    </a>
+
+{% endif %}

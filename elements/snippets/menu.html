@@ -1,0 +1,60 @@
+{% set more_quantity = settings.qnt_category | number_format | default(7) %}
+{% set more_categories = [] %}
+
+<nav class="nav">
+    <div class="container">
+        <ul class="list flex {% if categories | length > 4 %} justify-between {% else %} justify-center {% endif %} {% if settings.icon_menu_top %} vertical-icon {%- endif %}">
+
+            {% for category in categories %}
+                {% if settings.mais_active and loop.index > more_quantity %}
+                    {% set more_categories = more_categories | merge([category]) %}
+                {% else %}
+
+                    <li class="first-level {%- if category.children %} sub {% endif %} {% if settings.category_nivel %} relative {% endif %}" data-id="{{ category.id }}">
+                        <a href="{{ category.link }}">
+
+                            {% if settings.icon_menu and category.images %}
+                                <img class="icon" src="{{ category.images[0] }}" alt="{{ category.name }}" />
+                            {% endif %}
+
+                            <div class="name">
+                                {{ category.name }}
+                            </div>
+
+                        </a>
+                        {% if category.children %}
+                            {% set subcategory = settings.category_nivel ? 'snippets/menu-subcategory' : 'snippets/menu-subcategory-third-level' %}
+                            {% element subcategory {
+                                'category_id' : category.id,
+                                'subs'        : category.children
+                            } %}
+                        {% endif %}
+                    </li>
+
+                {% endif %}
+            {% endfor %}
+
+            {% if categories | length > more_quantity and more_categories | length > 0 and settings.mais_active %}
+
+                {% set more_caregories_text = settings.show_more_categories_text | default ('Departamentos') %}
+                <li class="first-level sub">
+                    <a href="javascript:void(0);">
+                        {% if settings.icon_menu and settings.mais_img %}
+                            <img class="icon" src="{{ asset(settings.mais_img) }}" alt="">
+                        {% endif %}
+                        <div class="name">
+                            {{ more_caregories_text }}
+                        </div>
+                    </a>
+                    {% element 'snippets/menu-subcategory' {
+                        'more_categories' : true,
+                        'subs'            : more_categories
+                    } %}
+                </li>
+
+            {% endif %}
+
+            
+        </ul>
+    </div>
+</nav>

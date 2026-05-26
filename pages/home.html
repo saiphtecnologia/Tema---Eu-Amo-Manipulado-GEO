@@ -1,0 +1,89 @@
+<div class="content-home">
+
+    {% element 'snippets/banner-home'     %}
+    {% element 'snippets/line-info'       %}
+    {% element 'snippets/banner-grid'     %}
+    {% element 'snippets/categories-line' %}
+
+
+    {# First showcase #}
+    {% element 'showcase' {
+        'carousel' : settings.showcase_use_carousel,
+        'rand'     : settings.showcase_rand_products,
+        'title'    : settings.showcase_title_1,
+        'type'     : settings.showcase_type_1,
+        'quantity' : settings.showcase_quantity_1
+    } %}
+
+
+    {% element 'snippets/banner-line' { 'banner_id': 'extra4' } %}
+    {% element 'snippets/banner-line' { 'banner_id': 'extra5', 'mobile': true } %}
+
+
+    {# Second showcase #}
+    {% element 'showcase' {
+        'carousel' : settings.showcase_use_carousel,
+        'rand'     : settings.showcase_rand_products,
+        'title'    : settings.showcase_title_2,
+        'type'     : settings.showcase_type_2,
+        'quantity' : settings.showcase_quantity_2
+    } %}
+
+
+    {% element 'snippets/banner-line' { 'banner_id': 'extra6' } %}
+    {% element 'snippets/banner-line' { 'banner_id': 'extra7', 'mobile': true } %}
+
+
+    {# Third showcase #}
+    {% element 'showcase' {
+        'carousel' : settings.showcase_use_carousel,
+        'rand'     : settings.showcase_rand_products,
+        'title'    : settings.showcase_title_3,
+        'type'     : settings.showcase_type_3,
+        'quantity' : settings.showcase_quantity_3
+    } %}
+
+
+    {% element 'snippets/brands' %}
+
+
+    {% for page in pages.custom %}
+        {% if page.slug == "noticias" and settings.show_news %}
+            <div class="section-news slide-has-dots">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="title-section">
+                            <a href="{{ page.url }}">
+                                {{ settings.title_news }}
+                            </a>
+                        </h2>
+                        <h3 class="subtitle-section">
+                            {{ settings.subtitle_news }}
+                        </h3>
+                    </div>
+                    <div class="news-content swiper-container hide-dots-desk">
+                        <div class="swiper-wrapper"></div>
+                        <div class="dots"></div>
+                    </div>
+
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+    {% for pages in pages.custom %}
+        {% if pages.info == "depoimentos_de_clientes" and settings.show_reviews %}
+            <div class="section-avaliacoes slide-has-dots">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="title-section">
+                            {{ settings.title_reviews }}
+                        </h2>
+                    </div>
+                    {% element 'CustomerReview.reviews' %}
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+</div>

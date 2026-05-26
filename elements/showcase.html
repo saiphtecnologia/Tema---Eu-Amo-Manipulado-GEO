@@ -1,0 +1,87 @@
+{% if type and title %}
+
+    {% set quantity = quantity | default(8) %}
+
+    {% if type == 'top_seller' %}
+
+        {% set products = Products({
+            'filter': ['available'],
+            'order' : { 'quantity_sold': 'desc' },
+            'limit' : quantity
+        }) %}
+
+    {% else %}
+        {% if rand %}
+
+            {% set products = Products({
+                'filter': [type, 'available'],
+                'limit' : quantity,
+                'order' : 'rand'
+            }) %}
+
+        {% else %}
+
+            {% set products = Products({
+                'filter': [type, 'available'],
+                'limit' : quantity
+            }) %}
+
+        {% endif %}
+    {% endif %}
+
+    {% if products | length > 0 %}
+        <div class="section-showcase">
+            <div class="container">
+
+                {% if carousel %}
+
+                    <div class="section-header">
+                        <h2 class="title-section">
+                            {{ title }}
+                        </h2>
+                    </div>
+                    <div class="swiper-container hide-dots-desk">
+                        <div class="list-product swiper-wrapper">
+                            {% for item in products %}
+                                <div class="item swiper-slide">
+                                    {% element 'snippets/product' {
+                                        "product" : item,
+                                        "slide"   : carousel
+                                    } %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="prev">
+                            <i class="icon icon-arrow-left"></i>
+                        </div>
+                        <div class="next">
+                            <i class="icon icon-arrow-right"></i>
+                        </div>
+                        <div class="dots"></div>
+                    </div>
+
+                {% else %}
+
+                    <div class="section-header">
+                        <h2 class="title-section">
+                            {{ title }}
+                        </h2>
+                    </div>
+                    <div class="list-product flex f-wrap">
+                        {% for item in products %}
+                            <div class="item">
+                                {% element 'snippets/product' {
+                                    "product" : item,
+                                    "slide"   : carousel
+                                } %}
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                {% endif %}
+
+            </div>
+        </div>
+    {% endif %}
+
+{% endif %}

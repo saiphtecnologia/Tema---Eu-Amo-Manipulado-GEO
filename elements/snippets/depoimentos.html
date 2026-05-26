@@ -1,0 +1,225 @@
+{% if settings.show_reviews %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-header">
+                <h2 class="title-section" style="margin-top: 50px;">
+                    {{ settings.title_reviews }}
+                </h2>
+            </div>
+            <div id="testimonial-slider" class="owl-carousel">
+                {% if settings.nome_dep_1 %}
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_1)}}">
+                        </div>
+                        <div class="conteudo">
+                            <p class="description">
+                                {{settings.text_dep_1}}
+                            </p>
+                            <h3 class="title">{{settings.nome_dep_1}}</h3>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if settings.nome_dep_2 %}
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_2)}}">
+                        </div>
+                        <div class="conteudo">
+                            <p class="description">
+                                {{settings.text_dep_2}}
+                            </p>
+                            <h3 class="title">{{settings.nome_dep_2}}</h3>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if settings.nome_dep_3 %}
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_3)}}">
+                        </div>
+                        <div class="conteudo">
+                            <p class="description">
+                                {{settings.text_dep_3}}
+                            </p>
+                            <h3 class="title">{{settings.nome_dep_3}}</h3>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if settings.nome_dep_4 %}
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_4)}}">
+                        </div>
+                        <div class="conteudo">
+                            <p class="description">
+                                {{settings.text_dep_4}}
+                            </p>
+                            <h3 class="title">{{settings.nome_dep_4}}</h3>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if settings.nome_dep_5 %}
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_5)}}">
+                        </div>
+                        <div class="conteudo">
+                            <p class="description">
+                                {{settings.text_dep_5}}
+                            </p>
+                            <h3 class="title">{{settings.nome_dep_5}}</h3>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if settings.nome_dep_6 %}
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_6)}}">
+                        </div>
+                        <div class="conteudo">
+                            <p class="description">
+                                {{settings.text_dep_6}}
+                            </p>
+                            <h3 class="title">{{settings.nome_dep_6}}</h3>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if settings.nome_dep_7 %}
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_7)}}">
+                        </div>
+                        <div class="conteudo">
+                            <p class="description">
+                                {{settings.text_dep_7}}
+                            </p>
+                            <h3 class="title">{{settings.nome_dep_7}}</h3>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if settings.nome_dep_8 %}
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_8)}}">
+                        </div>
+                        <div class="conteudo">
+                            <p class="description">
+                                {{settings.text_dep_8}}
+                            </p>
+                            <h3 class="title">{{settings.nome_dep_8}}</h3>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if settings.nome_dep_9 %}
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_9)}}">
+                        </div>
+                        <div class="conteudo">
+                            <p class="description">
+                                {{settings.text_dep_9}}
+                            </p>
+                            <h3 class="title">{{settings.nome_dep_9}}</h3>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if settings.nome_dep_10 %}
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_10)}}">
+                        </div>
+                        <div class="conteudo">
+                            <p class="description">
+                                {{settings.text_dep_10}}
+                            </p>
+                            <h3 class="title">{{settings.nome_dep_10}}</h3>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .testimonial{
+            border-right: 4px solid #01833a;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 0 15px 30px 15px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-direction: column;
+            min-height: 310px;
+        }
+        .testimonial .conteudo {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .testimonial .pic{
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #01833a;
+        }
+        .testimonial .pic img{
+            width: 100%;
+            height: auto;
+        }
+        .testimonial .description{
+            font-size: 15px;
+            letter-spacing: 1px;
+            color: #6f6f6f;
+            line-height: 25px;
+            margin-bottom: 15px;
+        }
+        .testimonial .title{
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #01833a;
+            margin: 0;
+        }
+        .testimonial .post{
+            display: inline-block;
+            font-size: 17px;
+            color: #01833a;
+            font-style:italic;
+        }
+        .owl-theme .owl-controls .owl-page span{
+            border: 2px solid #01833a;
+            background: #fff !important;
+            border-radius:50px !important;
+            opacity: 1;
+        }
+        .owl-theme .owl-controls .owl-page.active span,
+        .owl-theme .owl-controls .owl-page:hover span{
+            background: #01833a !important;
+            border-color: #01833a;
+        }
+        @media only screen and (max-width: 767px){
+            .testimonial{
+                padding: 20px;
+                text-align: center;
+                min-height: 350px;
+            }
+            .testimonial .pic{
+                display: block;
+                position: static;
+                margin: 0 auto 15px;
+            }
+        }
+</style>
+
+{% endif %}

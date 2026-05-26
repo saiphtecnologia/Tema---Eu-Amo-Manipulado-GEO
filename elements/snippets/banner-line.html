@@ -1,0 +1,19 @@
+{% set banner = banners[banner_id] %}
+{% set mobile = mobile | default(false) %}
+
+{% if banner %}
+<div class="container">
+    <div class="banner-line {% if mobile %} mobile {% else %} desk {% endif %}">
+
+        {% set link = banner.link ? banner.tracked_link : null %}
+        {% if link %}
+            <a href="{{ link }}" {% if banner.target == '_blank' %} target="_blank" rel="noopener noreferrer" {% endif %}>
+                <img class="lazyload" src="{{ asset('img/empty.png') }}" data-src="{{ banner.src }}" alt="{{ banner.alt }}">
+            </a>
+        {% else %}
+            <img class="lazyload" src="{{ asset('img/empty.png') }}" data-src="{{ banner.src }}" alt="{{ banner.alt }}">
+        {% endif %}
+
+    </div>
+</div>
+{% endif %}

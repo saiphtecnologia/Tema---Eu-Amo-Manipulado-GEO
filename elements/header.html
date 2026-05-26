@@ -1,0 +1,93 @@
+<header class="header-mobile">
+
+    <div class="header-menu" data-toggle="overlay-shadow" data-target="#menu-mobile">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    {% element 'snippets/header-search' %}
+
+    <div class="cart-toggle" data-toggle="overlay-shadow" data-target="#sidecart">
+        <i class="icon icon-cart v-align-middle"></i>
+        <span class="cart-quantity" data-cart="amount"></span>
+    </div>
+
+</header>
+
+<header class="header">
+
+    <div class="top-bar">
+        <div class="container flex justify-between align-center">
+
+            <a class="help-block" href="javascript:void(0);" data-toggle="overlay-shadow" data-target="#help-info-box">
+                {{ settings.text_help ? settings.text_help : 'Precisa de ajuda?' }}
+            </a>
+
+            {% if settings.header_message %}
+                <div class="message flex align-center">
+
+                    {% if settings.header_message_icon %}
+                        <i class="icon icon-{{ settings.header_message_icon }}"></i>
+                    {% endif %}
+
+                    <span class="text">
+                        {{ settings.header_message }}
+                    </span>
+
+                </div>
+            {% endif %}
+
+            {% if settings.whatsapp_number != '' %}
+                <div class="whatsapp">
+                    {% element 'snippets/whatsapp' { 'local': 'inline', 'include_text' : true, 'include_icon' : false } %}
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+
+    <div class="bg">
+
+        <div class="line flex align-center justify-between container">
+
+            <div class="header-menu" data-toggle="overlay-shadow" data-target="#menu-mobile">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <a class="logo" href="{{ store.url }}">
+
+                {% if settings.logo %}
+                    <img src="{{ asset(settings.logo) }}" alt="{{ store.name }}">
+                {% else %}
+                    <img src="{{ asset('img/logo.svg') }}" alt="{{ store.name }}">
+                {% endif %}
+
+                {% if 'home' in pages.current %}
+                    <h1 class="title-store">{{ store.name }}</h1>
+                {% else %}
+                    <div class="title-store">{{ store.name }}</div>
+                {% endif %}
+
+            </a>
+
+            {% element 'snippets/header-search' %}
+
+            <div class="account">
+                {% element 'snippets/account' { 'view' : 'desk' } %}
+            </div>
+
+            <div class="cart-toggle" data-toggle="overlay-shadow" data-target="#sidecart">
+                <i class="icon icon-cart v-align-middle"></i>
+                <span class="cart-quantity" data-cart="amount"></span>
+            </div>
+
+        </div>
+    </div>
+
+    {% element 'snippets/menu' %}
+    
+
+</header>
