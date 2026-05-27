@@ -1,0 +1,145 @@
+A documentação oficial da Tray para esse trabalho está concentrada em **três bases principais**: a **Central do Parceiro / Documentação de Temas** para criação e edição de temas, o **portal Tray Developers** para integrações via API/Apps/Webhooks, e a **base de conhecimento da Tray** para o **Tema Padrão 3.0** e o editor visual do tema padrão. ([Central do Parceiro Tray][1])
+
+## Base principal para desenvolver e editar tema na Tray
+
+### 1) Portal de Temas da Central do Parceiro
+
+Este é o portal mais importante para você agora. Ele reúne o fluxo completo de desenvolvimento de temas: começar, CLI, Twig, estrutura do tema, editor, referências, APIs disponíveis e homologação. ([Central do Parceiro Tray][1])
+
+* **Temas Tray**: página inicial do portal de temas, com a árvore completa da documentação. ([Central do Parceiro Tray][1])
+* **Entenda o Tema**: explica o que é um tema Tray e confirma que os temas são feitos com **Twig + HTML + CSS + JavaScript + JSON**. ([Central do Parceiro Tray][2])
+* **Meu primeiro tema**: melhor ponto de partida para setup inicial, criação do tema e sincronização com a plataforma. ([Central do Parceiro Tray][3])
+
+## Fluxo recomendado para você começar
+
+Eu seguiria exatamente esta ordem:
+
+1. **Meu primeiro tema**
+2. **Instalação do Tray CLI**
+3. **Entenda o Tema**
+4. **Visão Geral / Estrutura do Tema / Arquivo de configuração**
+5. **Twig**
+6. **Editor do Tema**
+7. **Desenvolver**
+8. **Referências**
+9. **APIs Disponíveis**
+10. **Homologação**, se quiser publicar/vender o tema. ([Central do Parceiro Tray][3])
+
+## Documentações que você vai usar de verdade
+
+### Começo e setup
+
+* **Meu primeiro tema**: mostra o onboarding completo e informa que, para criar tema em loja de desenvolvimento, você precisa se tornar parceiro, criar a loja e usar o **Tray CLI**. Também mostra onde gerar o token no admin: **Configurações > Minha Loja > Editar layout > Lista de desenvolvedores > Adicionar desenvolvedor**. ([Central do Parceiro Tray][3])
+* **Instalação do Tray CLI**: traz a instalação do CLI e informa que, se instalar localmente, os comandos precisam de `npx`. ([Central do Parceiro Tray][4])
+* **API para integrações do Tray CLI**: útil se você quiser automatizar comandos do CLI em outra ferramenta ou pipeline. ([Central do Parceiro Tray][5])
+
+### Estrutura técnica do tema
+
+* **Entenda o Tema**: visão conceitual geral do ecossistema de temas Tray. ([Central do Parceiro Tray][2])
+* **Visão Geral**: índice da parte estrutural do tema, incluindo estrutura, extensões, codificação, avisos e flags. ([Central do Parceiro Tray][6])
+* **Estrutura do Tema**: mostra a estrutura padrão de pastas, incluindo `configs/`, `css/`, `elements/`, `img/`, `js/`, `layouts/` e `pages/`. Também informa que `configs/` é obrigatória e contém `settings.html` e `settings.json`. ([Central do Parceiro Tray][7])
+* **Arquivo de configuração**: explica o `config.json` local, usado para sincronização com a plataforma, e alerta para não alterar o conteúdo manualmente; se necessário, refaça com `tray configure`. ([Central do Parceiro Tray][8])
+
+### Twig e base de templating
+
+* **Twig**: índice da documentação de Twig aplicada aos temas Tray. ([Central do Parceiro Tray][9])
+* **Como ele é utilizado nos temas**: reforça que os layouts usam Twig, mas os arquivos do tema continuam sendo salvos com extensão `.html`. ([Central do Parceiro Tray][10])
+* **Possibilidades de uso**: mostra conceitos práticos de filtros e funções dentro do Twig. ([Central do Parceiro Tray][11])
+
+### Editor do tema
+
+* **Editor do Tema**: explica o propósito do customizador, para dar autonomia ao lojista em alterações simples de layout, cores, infos e imagens. ([Central do Parceiro Tray][12])
+* **Como criar um Editor**: mostra que você cria o painel de customização dentro de `configs/`, com `settings.html` e `settings.json`, e depois o botão **Editar Tema** passa a aparecer na loja. ([Central do Parceiro Tray][13])
+* **Settings.html**: detalha a estrutura do arquivo responsável pelos campos exibidos no admin para personalização. ([Central do Parceiro Tray][14])
+* **Novo editor**: existe documentação do novo editor em JSON, mas a própria Tray informa que a documentação está em andamento e que ele **não deve ser usado para homologação**, devendo-se usar o editor antigo nesse fluxo. ([Central do Parceiro Tray][15])
+
+### Desenvolvimento prático
+
+* **Desenvolver**: é um hub com tutoriais práticos para recursos de tema, como botão comprar na listagem, carrossel de produtos, vídeo na home, variações, páginas institucionais, live shop, carrinho/checkout e outros. ([Central do Parceiro Tray][16])
+* **APIs Disponíveis**: reúne as APIs consumíveis no contexto do tema, incluindo **Busca, Carrinho de Compra, Categorias, Produtos e Variações de Produto**. ([Central do Parceiro Tray][17])
+
+### Referências internas do tema
+
+* **Referências**: índice principal para objetos, funções, data attributes e componentes. ([Central do Parceiro Tray][18])
+* **Objetos**: lista objetos importantes como `products`, `category`, `store`, `search`, `settings`, `tray`, `links`, `utils` e outros. ([Central do Parceiro Tray][19])
+* **Funções**: documentação das funções auxiliares prontas do ambiente Tray. ([Central do Parceiro Tray][20])
+* **asset()**: função recomendada para caminhos absolutos de CSS, JS e imagens do tema. ([Central do Parceiro Tray][21])
+* **themePath**: a própria documentação marca essa variável como **depreciada** e orienta usar `asset()` no lugar. ([Central do Parceiro Tray][22])
+* **Components**: há vários blocos reaproveitáveis, como menu de categorias, menu de marcas, filtro inteligente, carrinho lateral, banners etc. ([Central do Parceiro Tray][23])
+
+## Homologação e publicação de tema
+
+Se sua intenção é publicar ou vender tema na Loja de Temas, você precisa passar pela parte de homologação. A própria documentação informa que, para homologar, você deve ser parceiro certificado, seguir os requerimentos obrigatórios, preencher o checklist e cadastrar o tema no portal de parceiros. ([Central do Parceiro Tray][24])
+
+Os documentos principais dessa parte são:
+
+* **Requerimentos**: requisitos obrigatórios do tema para aprovação. ([Central do Parceiro Tray][24])
+* **Checklist obrigatório**: checklist formal usado no fluxo de homologação. ([Central do Parceiro Tray][25])
+* **Templates**: modelos padronizados para chamados de atualização/homologação. ([Central do Parceiro Tray][26])
+* **Homologando o tema**: explica o passo a passo do processo e informa o limite de até 2 temas por semana por parceiro. ([Central do Parceiro Tray][24])
+* **Documentação e suporte**: exige documentação pública em HTML, suporte técnico ao lojista, vínculo do suporte/documentação ao perfil e contato inicial em até 48 horas úteis. ([Central do Parceiro Tray][27])
+* **FAQ**: dúvidas operacionais sobre checklist, templates e fluxo de homologação. ([Central do Parceiro Tray][28])
+
+## Documentação para APIs, apps e integrações externas
+
+Além do portal de temas, a Tray mantém o **Tray Developers**, que é a base oficial para integrações com a plataforma. Lá estão as APIs REST, autorização/OAuth, criação de aplicativo, Webhook, Loja de Aplicativos e Gateway de Frete. A documentação também informa que não há ambiente isolado de testes; existe uma loja compartilhada para integradores no processo de homologação. ([Tray Developers][29])
+
+Essa base é a que você usa para:
+
+* integrar ERP,
+* pedidos,
+* produtos,
+* clientes,
+* webhooks,
+* frete,
+* scripts externos,
+* apps de terceiros. ([Tray Developers][29])
+
+## Tema Padrão 3.0 e editor visual
+
+Se você também pretende **editar o tema padrão da Tray**, e não apenas desenvolver tema customizado, a documentação útil fica na base de conhecimento da Tray. O artigo do **Tema Padrão 3.0** mostra o editor visual com **drag and drop**, a ativação pelo painel e os artigos relacionados para editar rodapé, cabeçalho, vitrines, banners, marcas, barra de informações e outras seções. ([Tray Conhecimento][30])
+
+## Resumo objetivo do que você precisa salvar
+
+Para não se perder, estes são os núcleos que realmente importam:
+
+* **Portal de Temas / Central do Parceiro**: sua base principal para criar e editar tema. ([Central do Parceiro Tray][1])
+* **Meu primeiro tema + Instalação CLI**: seu ponto de partida técnico. ([Central do Parceiro Tray][3])
+* **Estrutura do Tema + config.json + Twig + Referências**: seu núcleo de desenvolvimento. ([Central do Parceiro Tray][7])
+* **Editor do Tema + Settings**: seu núcleo de customização para o lojista. ([Central do Parceiro Tray][12])
+* **Developers Portal**: sua base para APIs e integrações externas. ([Tray Developers][29])
+* **Homologação**: necessária se você pretende publicar/vender tema. ([Central do Parceiro Tray][24])
+* **Tema Padrão 3.0**: útil se você for mexer no editor visual do tema padrão da Tray. ([Tray Conhecimento][30])
+
+Posso te entregar em seguida um **roteiro prático de setup da Tray**, em ordem de execução, já com os primeiros arquivos e a estrutura ideal para começar seu tema do zero.
+
+[1]: https://partners.tray.com.br/themes "Temas Tray | Documentação de Temas | Central do Parceiro"
+[2]: https://partners.tray.com.br/themes/comece-por-aqui/entenda-o-tema "Entenda o Tema | Documentação de Temas | Central do Parceiro"
+[3]: https://partners.tray.com.br/themes/comece-por-aqui/meu-primeiro-tema "Meu primeiro tema | Documentação de Temas | Central do Parceiro"
+[4]: https://partners.tray.com.br/themes/tray-cli/instalacao "Instalação | Documentação de Temas | Central do Parceiro"
+[5]: https://partners.tray.com.br/themes/tray-cli/api-para-integracoes "API para integrações | Documentação de Temas | Central do Parceiro"
+[6]: https://partners.tray.com.br/themes/construindo-seu-template/visao-geral?utm_source=chatgpt.com "Visão Geral | Documentação de Temas - Central do Parceiro Tray ..."
+[7]: https://partners.tray.com.br/themes/construindo-seu-template/visao-geral/estrutura-do-tema "Estrutura do Tema | Documentação de Temas | Central do Parceiro"
+[8]: https://partners.tray.com.br/themes/construindo-seu-template/visao-geral/arquivo-de-configuracao "Arquivo de configuração | Documentação de Temas | Central do Parceiro"
+[9]: https://partners.tray.com.br/themes/construindo-seu-template/twig?utm_source=chatgpt.com "Twig | Documentação de Temas | Central do Parceiro"
+[10]: https://partners.tray.com.br/themes/construindo-seu-template/twig/como-ele-e-utilizado-nos-temas?utm_source=chatgpt.com "Como ele é utilizado nos temas | Documentação de Temas"
+[11]: https://partners.tray.com.br/themes/construindo-seu-template/twig/possibilidades-de-uso?utm_source=chatgpt.com "Possibilidades de uso | Documentação de Temas"
+[12]: https://partners.tray.com.br/themes/construindo-seu-template/editor-do-tema "Editor do Tema | Documentação de Temas | Central do Parceiro"
+[13]: https://partners.tray.com.br/themes/construindo-seu-template/editor-do-tema/editor/como-criar-um-editor "Como criar um Editor | Documentação de Temas | Central do Parceiro"
+[14]: https://partners.tray.com.br/themes/construindo-seu-template/editor-do-tema/editor/settings.html "Settings.html | Documentação de Temas | Central do Parceiro"
+[15]: https://partners.tray.com.br/themes/construindo-seu-template/editor-do-tema/novo "Novo | Documentação de Temas | Central do Parceiro"
+[16]: https://partners.tray.com.br/themes/construindo-seu-template/desenvolver "Desenvolver | Documentação de Temas | Central do Parceiro"
+[17]: https://partners.tray.com.br/themes/construindo-seu-template/apis-disponiveis?utm_source=chatgpt.com "APIs Disponíveis | Documentação de Temas"
+[18]: https://partners.tray.com.br/themes/construindo-seu-template/referencias?utm_source=chatgpt.com "Referências | Documentação de Temas | Central do Parceiro"
+[19]: https://partners.tray.com.br/themes/construindo-seu-template/referencias/objetos?utm_source=chatgpt.com "Objetos | Documentação de Temas | Central do Parceiro"
+[20]: https://partners.tray.com.br/themes/construindo-seu-template/referencias/funcoes?utm_source=chatgpt.com "Funções | Documentação de Temas | Central do Parceiro"
+[21]: https://partners.tray.com.br/themes/construindo-seu-template/referencias/funcoes/asset?utm_source=chatgpt.com "asset() | Documentação de Temas | Central do Parceiro"
+[22]: https://partners.tray.com.br/themes/construindo-seu-template/referencias/objetos/themepath?utm_source=chatgpt.com "themePath | Documentação de Temas | Central do Parceiro"
+[23]: https://partners.tray.com.br/themes/construindo-seu-template/referencias/componentes?utm_source=chatgpt.com "Componentes | Documentação de Temas - Central do Parceiro Tray ..."
+[24]: https://partners.tray.com.br/themes/homologacao/homologando-o-tema "Homologando o tema | Documentação de Temas | Central do Parceiro"
+[25]: https://partners.tray.com.br/themes/homologacao/checklist-obrigatorio "Checklist obrigatório | Documentação de Temas | Central do Parceiro"
+[26]: https://partners.tray.com.br/themes/homologacao/templates?utm_source=chatgpt.com "Templates | Documentação de Temas | Central do Parceiro"
+[27]: https://partners.tray.com.br/themes/homologacao/requerimentos/documentacao-e-suporte "Documentação e suporte | Documentação de Temas | Central do Parceiro"
+[28]: https://partners.tray.com.br/themes/homologacao/faq?utm_source=chatgpt.com "FAQ | Documentação de Temas | Central do Parceiro"
+[29]: https://developers.tray.com.br/ "Tray Developers"
+[30]: https://basedeconhecimento.tray.com.br/hc/pt-br/articles/42463828386971-Tudo-sobre-o-Tema-Padr%C3%A3o-3-0-em-Tray "Tudo sobre o Tema Padrão 3.0 em Tray – Tray Tecnologia em Ecommerce LTDA"

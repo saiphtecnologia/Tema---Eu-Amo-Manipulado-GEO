@@ -1,0 +1,99 @@
+A estrutura do tema padrão da Tray segue uma organização bem definida que facilita tanto a criação de novos temas quanto a personalização dos existentes. Aqui está uma visão detalhada da estrutura de pastas e arquivos que compõem o **Tema Padrão** da Tray:
+
+### 1. **Estrutura de Pastas do Tema**
+
+A Tray utiliza uma arquitetura de diretórios baseada nas melhores práticas de desenvolvimento web. Cada pasta e arquivo tem uma função específica no processo de desenvolvimento e personalização do tema. A seguir, estão as principais pastas e arquivos encontrados na estrutura de um **tema padrão Tray**:
+
+#### 🔹 **Pastas principais**:
+
+* **`assets/`**
+  Pasta onde ficam os **arquivos estáticos** do tema, como imagens, fontes, e arquivos de mídia (ex: `.png`, `.jpg`, `.svg`, `.woff`).
+
+  * **`assets/css/`**: Arquivos CSS, como estilos personalizados.
+  * **`assets/js/`**: Scripts JavaScript que adicionam funcionalidades e interatividade.
+  * **`assets/img/`**: Imagens e ícones utilizados no tema.
+
+* **`configs/`**
+  Essa pasta contém os **arquivos de configuração** do tema, que definem as opções de personalização e a estrutura do tema. Dentro dela, o arquivo **`settings.html`** é um dos principais responsáveis por permitir que o lojista edite as configurações do tema diretamente do painel administrativo da Tray.
+
+  * **`settings.html`**: Arquivo que define os campos de personalização no admin da Tray (cores, fontes, textos, etc.).
+  * **`settings.json`**: Arquivo que armazena as configurações selecionadas pelo usuário no painel de edição do tema. Ele se comunica com o `settings.html` para guardar os dados inseridos.
+
+* **`elements/`**
+  Essa pasta contém os **componentes e partes reutilizáveis** do tema, como cabeçalhos, rodapés, e blocos de conteúdo que podem ser usados em várias páginas do site.
+
+  * **`header.twig`**: Arquivo de template do cabeçalho.
+  * **`footer.twig`**: Arquivo de template do rodapé.
+
+* **`layouts/`**
+  Armazena os **arquivos de layout** do tema, que definem a estrutura global das páginas, como a posição do conteúdo, barras laterais e outras seções.
+
+  * **`main.twig`**: Arquivo principal de layout que é utilizado como modelo para as páginas do site.
+  * **`product.twig`**: Layout específico para a página de produto.
+
+* **`pages/`**
+  Pasta onde ficam os **arquivos de templates específicos para páginas** do site, como a página inicial, página de categorias e outras páginas personalizadas.
+
+  * **`home.twig`**: Template da página inicial.
+  * **`category.twig`**: Template da página de categorias.
+
+* **`snippets/`**
+  Contém arquivos de **código reutilizável** que podem ser incluídos em outros templates, como blocos de código para banners, promoções, ou funcionalidades de carrinho de compras.
+
+  * **`promotion-banner.twig`**: Exemplo de código reutilizável para um banner promocional.
+
+#### 🔹 **Arquivos principais**:
+
+* **`config.json`**
+  Arquivo de configuração global do tema, responsável por vincular o tema à plataforma Tray e especificar os detalhes técnicos, como ID do tema e informações de integração. Esse arquivo **não deve ser editado manualmente**, sendo configurado por meio do **Tray CLI**.
+
+### 2. **Principais Arquivos de Template**
+
+* **`index.twig`**
+  Arquivo principal de entrada que define a estrutura da página inicial do e-commerce. Ele chama outras seções e templates da estrutura do tema.
+
+* **`product.twig`**
+  Usado para criar a página de **detalhes do produto**, exibindo informações como nome, preço, descrição, e opções de compra. Essa página também pode incluir funcionalidades como avaliações e sugestões de produtos relacionados.
+
+* **`category.twig`**
+  Responsável pela **página de categoria** do site, exibindo uma lista de produtos filtrados por categoria e com várias opções de ordenação e filtragem.
+
+### 3. **Customização e Configurações**
+
+* A personalização de temas é feita basicamente a partir dos arquivos de configuração:
+
+  * **`settings.html`**: Onde você define os campos de edição, como opções de cores, fontes, textos, imagens, etc.
+  * **`settings.json`**: Onde as configurações do tema são salvas e podem ser lidas para aplicar as alterações no tema.
+
+### 4. **Funções e Variáveis**
+
+A Tray oferece **funções e variáveis** para facilitar o acesso aos dados e recursos do site no template. Alguns exemplos:
+
+* **`{{ store.name }}`**: Nome da loja.
+* **`{{ cart.total }}`**: Total do carrinho de compras.
+* **`{{ product.name }}`**: Nome do produto.
+* **`{{ category.name }}`**: Nome da categoria.
+
+Essas variáveis ajudam a integrar dados dinâmicos do site dentro dos templates, como listas de produtos, carrinho de compras e informações da loja.
+
+### 5. **Editor de Tema**
+
+O **editor visual** da Tray permite que o lojista personalize seu tema sem mexer diretamente no código. A partir da configuração no `settings.html`, o administrador do site pode alterar a aparência do tema de forma intuitiva, incluindo opções de layout, cores, fontes, e banners.
+
+---
+
+### 6. **Resumo da Estrutura**:
+
+* **assets/**: Imagens, CSS e JS.
+* **configs/**: Configurações personalizadas (`settings.html` e `settings.json`).
+* **elements/**: Componentes reutilizáveis (cabeçalho, rodapé, etc.).
+* **layouts/**: Arquivos de layout geral (ex: `main.twig`).
+* **pages/**: Templates específicos de páginas (ex: `home.twig`).
+* **snippets/**: Códigos reutilizáveis (ex: banners, promoções).
+
+### **Documentação Oficial**
+
+Você pode encontrar a documentação completa sobre a estrutura do tema e mais detalhes sobre como personalizar e implementar seu tema no portal de parceiros da Tray:
+[Documentação de Temas - Tray](https://partners.tray.com.br/themes)
+
+Se precisar de exemplos práticos de código ou ajuda para configurar um tema, posso te ajudar a estruturar os primeiros arquivos para começar!

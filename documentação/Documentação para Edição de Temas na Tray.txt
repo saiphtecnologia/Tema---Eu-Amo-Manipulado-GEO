@@ -1,0 +1,46 @@
+Documentação da Tray para entender como funciona a edição dos Temas que precisamos personalizar:
+
+Aqui estão os principais **links oficiais de documentação da Tray relacionados a desenvolvimento e edição de temas**, APIs e integrações para desenvolvedores:
+
+### 📌 Documentação de Edição de Temas (Portal do Parceiro)
+
+* **Temas Tray — documentação completa**
+  [https://partners.tray.com.br/themes](https://partners.tray.com.br/themes) ([Central do Parceiro Tray][1])
+
+* **Meu primeiro tema (setup inicial, CLI, token e criação)**
+  [https://partners.tray.com.br/themes/comece-por-aqui/meu-primeiro-tema](https://partners.tray.com.br/themes/comece-por-aqui/meu-primeiro-tema) ([Central do Parceiro Tray][2])
+
+* **Entenda o tema (Twig, estrutura, propósito)**
+  [https://partners.tray.com.br/themes/comece-por-aqui/entenda-o-tema](https://partners.tray.com.br/themes/comece-por-aqui/entenda-o-tema) ([Central do Parceiro Tray][3])
+
+* **Estrutura do tema (pastas e arquivos)**
+  [https://partners.tray.com.br/themes/construindo-seu-template/visao-geral/estrutura-do-tema](https://partners.tray.com.br/themes/construindo-seu-template/visao-geral/estrutura-do-tema) ([Central do Parceiro Tray][4])
+
+* **APIs Disponíveis no contexto de tema**
+  [https://partners.tray.com.br/themes/construindo-seu-template/apis-disponiveis](https://partners.tray.com.br/themes/construindo-seu-template/apis-disponiveis) ([Central do Parceiro Tray][5])
+
+* **API para integrações do Tray CLI**
+  [https://partners.tray.com.br/themes/tray-cli/api-para-integracoes](https://partners.tray.com.br/themes/tray-cli/api-para-integracoes) ([Central do Parceiro Tray][6])
+
+### 📌 APIs e integrações externas
+
+* **Tray Developers (Portal oficial de APIs, Apps & integrações)**
+  [https://developers.tray.com.br/](https://developers.tray.com.br/) ([Tray Developers][7])
+
+### 📌 Homologação / suporte para temas
+
+* **Documentação de temas — Requerimentos e suporte para publicação**
+  [https://partners.tray.com.br/themes/homologacao/requerimentos/documentacao-e-suporte](https://partners.tray.com.br/themes/homologacao/requerimentos/documentacao-e-suporte) ([Central do Parceiro Tray][8])
+
+---
+
+Se quiser, posso organizar esses links em um **PDF com resumos diretos de cada seção** ou montar um **roteiro de estudo passo a passo** pra você começar a desenvolver seu tema na Tray.
+
+[1]: https://partners.tray.com.br/themes?utm_source=chatgpt.com "Temas Tray | Documentação de Temas | Central do Parceiro"
+[2]: https://partners.tray.com.br/themes/comece-por-aqui/meu-primeiro-tema?utm_source=chatgpt.com "Meu primeiro tema | Documentação de Temas"
+[3]: https://partners.tray.com.br/themes/comece-por-aqui/entenda-o-tema?utm_source=chatgpt.com "Entenda o Tema | Documentação de Temas"
+[4]: https://partners.tray.com.br/themes/construindo-seu-template/visao-geral/estrutura-do-tema?utm_source=chatgpt.com "Estrutura do Tema | Documentação de Temas"
+[5]: https://partners.tray.com.br/themes/construindo-seu-template/apis-disponiveis?utm_source=chatgpt.com "APIs Disponíveis | Documentação de Temas"
+[6]: https://partners.tray.com.br/themes/tray-cli/api-para-integracoes?utm_source=chatgpt.com "API para integrações | Documentação de Temas"
+[7]: https://developers.tray.com.br/?utm_source=chatgpt.com "Tray Developers"
+[8]: https://partners.tray.com.br/themes/homologacao/requerimentos/documentacao-e-suporte?utm_source=chatgpt.com "Documentação e suporte | Documentação de Temas"

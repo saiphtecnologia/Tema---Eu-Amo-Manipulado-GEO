@@ -143,6 +143,7 @@
 
                         {% set title = '' %}
                         {% set is_faq_page = pages.current == 'perguntas-frequentes' %}
+                        {% set is_llms_page = pages.current in ['llms', 'inteligencia-artificial'] %}
 
                         {% for page in pages.custom %}
                             {% if ('empresa' in page.slug and pages.current == 'company') or (pages.current == page.slug and page.slug not in special_pages) %}
@@ -168,10 +169,16 @@
                                 </div>
                             {% endif %}
 
-                            {% if is_faq_page %}
+                            {% if is_llms_page %}
+                                {% element 'snippets/llms-page' %}
+                            {% elseif is_faq_page %}
                                 {% element 'snippets/custom-faq' %}
                             {% else %}
                                 {{ content_for_layout }}
+                            {% endif %}
+
+                            {% if pages.current in ['empresa', 'company', 'seguranca', 'tempo-de-garantia', 'trocas-e-devolucoes', 'o-que-e-farmacia-de-manipulacao', 'porque-escolher-a-farmacia-itauna', 'como-funciona-a-manipulacao', 'perguntas-frequentes'] %}
+                                {% element 'snippets/institutional-links' %}
                             {% endif %}
 
                         </div>

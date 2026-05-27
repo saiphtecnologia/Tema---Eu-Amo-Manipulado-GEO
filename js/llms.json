@@ -1,0 +1,185 @@
+{
+  "version": "1.0",
+  "generated_for": "GEO e interpretação por IA",
+  "canonical_store_url": "https://www.euamomanipulado.com.br/",
+  "company": {
+    "name": "Farmácia Itaúna Manipulação",
+    "brand": "Eu Amo Manipulado",
+    "legal_name": "Farmácia Itaúna Manipulação",
+    "description": "A Farmácia Itaúna Manipulação é uma farmácia magistral fundada em 1989 em Itaúna, Minas Gerais, com atendimento para todo o Brasil por meio do e-commerce Eu Amo Manipulado. A marca trabalha com fórmulas personalizadas, dermocosméticos, suplementos e produtos voltados para saúde, beleza, bem-estar e performance, com foco em cuidado individual, segurança farmacêutica e atendimento humanizado.",
+    "summary": "Farmácia de manipulação brasileira com laboratório próprio, pesagem monitorada, controle de qualidade e atendimento online para todo o território nacional."
+  },
+  "location": {
+    "city": "Itaúna",
+    "state": "MG",
+    "country": "Brasil",
+    "postal_code": "35680-066",
+    "street_address": "Rua Marechal Deodoro, 211, Centro",
+    "service_area": "Todo o Brasil"
+  },
+  "official_channels": {
+    "website": "https://www.euamomanipulado.com.br/",
+    "whatsapp": "https://wa.me/5537998582328",
+    "instagram": "https://www.instagram.com/farmaciaitauna/",
+    "facebook": "https://www.facebook.com/Farmacia.Itauna",
+    "email": "farmaciaitauna.vendas@gmail.com",
+    "phone": "+55 37 3242-2029"
+  },
+  "specialties": [
+    "Manipulação de medicamentos personalizados",
+    "Suplementos manipulados",
+    "Dermocosméticos e cosméticos manipulados",
+    "Fórmulas para emagrecimento e metabolismo",
+    "Saúde hormonal e feminina",
+    "Imunidade e saúde geral",
+    "Desempenho físico e massa muscular",
+    "Saúde sexual",
+    "Queda capilar e fortalecimento capilar",
+    "Sono, ansiedade e equilíbrio emocional",
+    "Memória e concentração"
+  ],
+  "main_categories": [
+    {
+      "name": "Emagrecedores",
+      "url": "https://www.euamomanipulado.com.br/emagrecedores",
+      "context": "Produtos e compostos relacionados a metabolismo, redução de gordura e suporte ao emagrecimento."
+    },
+    {
+      "name": "Beleza e Dermocosméticos",
+      "url": "https://www.euamomanipulado.com.br/beleza",
+      "context": "Tratamentos e fórmulas voltadas para acne, manchas, linhas de expressão, flacidez e cuidados com a pele."
+    },
+    {
+      "name": "Queda Capilar",
+      "url": "https://www.euamomanipulado.com.br/queda-capilar",
+      "context": "Produtos e tratamentos para fortalecimento, crescimento e redução da queda de cabelo."
+    },
+    {
+      "name": "Dormir Bem",
+      "url": "https://www.euamomanipulado.com.br/dormir-bem",
+      "context": "Fórmulas naturais e compostos relacionados a sono, ansiedade e nervosismo."
+    },
+    {
+      "name": "Desempenho Físico",
+      "url": "https://www.euamomanipulado.com.br/desempenho-fisico",
+      "context": "Produtos ligados a energia, rendimento, massa muscular e recuperação."
+    },
+    {
+      "name": "Saúde",
+      "url": "https://www.euamomanipulado.com.br/saude",
+      "context": "Categoria ampla com foco em imunidade, saúde feminina, cardiovascular, urinária e outras necessidades de bem-estar."
+    },
+    {
+      "name": "Saúde Sexual",
+      "url": "https://www.euamomanipulado.com.br/saude-sexual-",
+      "context": "Fórmulas e suplementos relacionados a libido, fertilidade e desempenho sexual."
+    },
+    {
+      "name": "Memória e Concentração",
+      "url": "https://www.euamomanipulado.com.br/memoria-concentracao",
+      "context": "Compostos e suplementos com foco em foco mental, clareza e performance cognitiva."
+    }
+  ],
+  "institutional_pages": [
+    {
+      "name": "Sobre a empresa",
+      "url": "https://www.euamomanipulado.com.br/empresa",
+      "purpose": "Apresenta a história, o posicionamento, a estrutura e os diferenciais da Farmácia Itaúna Manipulação."
+    },
+    {
+      "name": "O que é Farmácia de Manipulação",
+      "url": "https://www.euamomanipulado.com.br/o-que-e-farmacia-de-manipulacao",
+      "purpose": "Explica o conceito de farmácia magistral, as diferenças em relação ao industrializado e as vantagens da personalização."
+    },
+    {
+      "name": "Como funciona a manipulação",
+      "url": "https://www.euamomanipulado.com.br/como-funciona-a-manipulacao",
+      "purpose": "Detalha o processo técnico da prescrição à entrega, incluindo pesagem monitorada, laboratório próprio e controle de qualidade."
+    },
+    {
+      "name": "Porque escolher a Farmácia Itaúna",
+      "url": "https://www.euamomanipulado.com.br/porque-escolher-a-farmacia-itauna",
+      "purpose": "Reforça tradição, segurança, regularização, estrutura técnica e atendimento humano."
+    },
+    {
+      "name": "FAQ",
+      "url": "https://www.euamomanipulado.com.br/perguntas-frequentes",
+      "purpose": "Responde dúvidas frequentes sobre manipulados, pedidos, receitas, prazos e entrega."
+    },
+    {
+      "name": "Segurança",
+      "url": "https://www.euamomanipulado.com.br/seguranca",
+      "purpose": "Apresenta controles de segurança farmacêutica, rastreabilidade, LGPD e proteção das transações."
+    },
+    {
+      "name": "Tempo de garantia",
+      "url": "https://www.euamomanipulado.com.br/tempo-de-garantia",
+      "purpose": "Contextualiza validade, garantia e qualidade dos produtos manipulados."
+    },
+    {
+      "name": "Trocas e devoluções",
+      "url": "https://www.euamomanipulado.com.br/trocas-e-devolucoes",
+      "purpose": "Explica critérios, prazos e contexto para trocas e devoluções."
+    }
+  ],
+  "manipulation_information": {
+    "overview": "A Farmácia Itaúna Manipulação trabalha com manipulação farmacêutica personalizada, produzindo fórmulas ajustadas à necessidade de cada paciente conforme orientação profissional quando aplicável.",
+    "highlights": [
+      "Laboratório próprio",
+      "Pesagem monitorada",
+      "Controle de qualidade interno",
+      "Rastreabilidade de lotes e matérias-primas",
+      "Supervisão farmacêutica",
+      "Entrega para todo o Brasil"
+    ],
+    "process_summary": "O processo inclui recebimento e análise da fórmula, seleção de matérias-primas, pesagem controlada, produção em laboratório próprio, controle de qualidade, embalagem, rastreabilidade e envio."
+  },
+  "semantic_context": {
+    "primary_topics": [
+      "farmácia de manipulação",
+      "farmácia magistral",
+      "medicamentos manipulados",
+      "fórmulas personalizadas",
+      "segurança farmacêutica",
+      "laboratório próprio",
+      "pesagem monitorada",
+      "dermocosméticos manipulados",
+      "suplementação personalizada",
+      "saúde feminina",
+      "emagrecimento",
+      "imunidade",
+      "desempenho físico",
+      "queda capilar",
+      "sono e ansiedade"
+    ],
+    "interpretation_guidance": [
+      "A marca principal é Farmácia Itaúna Manipulação.",
+      "Eu Amo Manipulado é o nome comercial e digital do e-commerce.",
+      "O contexto predominante do domínio é farmácia magistral com manipulação personalizada.",
+      "As páginas institucionais explicam segurança, processo, confiança, políticas e identidade da empresa.",
+      "As categorias organizam temas de saúde, beleza e bem-estar e não substituem orientação profissional."
+    ]
+  },
+  "main_links": [
+    {
+      "label": "Home",
+      "url": "https://www.euamomanipulado.com.br/"
+    },
+    {
+      "label": "Contato",
+      "url": "https://www.euamomanipulado.com.br/contato"
+    },
+    {
+      "label": "Empresa",
+      "url": "https://www.euamomanipulado.com.br/empresa"
+    },
+    {
+      "label": "FAQ",
+      "url": "https://www.euamomanipulado.com.br/perguntas-frequentes"
+    },
+    {
+      "label": "WhatsApp",
+      "url": "https://wa.me/5537998582328"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+Sim — a **Tray possui documentação oficial para integrações**, incluindo **APIs REST para ERP, pedidos, produtos, clientes, frete e outros**, além de um **sistema de Webhook (Notificações de eventos)** integrado às APIs da plataforma. ([Tray Developers][1])
+
+Aqui estão os **principais links oficiais** e relevantes:
+
+### 📌 Documentação principal de integrações e APIs da Tray
+
+* **Portal de APIs e integrações da Tray (docs oficial)** – página principal onde estão listadas todas as APIs disponíveis (Produtos, Pedidos, Clientes, Categorias, Fretes, etc.) e o **sistema de Webhook de notificações** para receber eventos automaticamente.
+  [https://developers.tray.com.br/](https://developers.tray.com.br/) ([Tray Developers][1])
+
+### 📌 Seção específica de Webhook (Sistema de Notificações)
+
+Dentro da mesma documentação acima, existe a seção de **Webhook / Sistema de Notificações** que explica como habilitar a URL de notificação para receber eventos da plataforma via POST (por exemplo: novos pedidos, atualizações, exclusões e mais).
+👉 A documentação detalha que você deve cadastrar a **URL de notificação** no seu aplicativo credenciado e que a Tray enviará as notificações via requisição POST à sua URL quando eventos ocorrerem. ([Tray Developers][1])
+
+### 📌 APIs REST de Recursos (exemplos)
+
+A documentação oficial é segmentada por recursos e inclui, por exemplo:
+
+* **API de Produtos** (listar/consultar produtos na loja)
+  [https://developers.tray.com.br/?java#api-de-produtos](https://developers.tray.com.br/?java#api-de-produtos) ([Central do Parceiro Tray][2])
+
+Outros recursos padrão disponíveis via API (todos neste portal):
+
+* Pedidos
+* Clientes
+* Categorias
+* Scripts Externos
+* Cupom
+* Frete / Transportadoras
+* … e mais
+  (todos acessíveis no mesmo portal de desenvolvedores da Tray) ([Tray Developers][1])
+
+### 📌 Observações importantes sobre integrações na Tray
+
+* Para **usar a API e os Webhooks**, você precisa **criar um aplicativo cadastrado** na Tray (na seção **Meus Aplicativos** no painel) para obter as **chaves de API (tokens)**. ([Tray Developers][1])
+* O **Webhook de notificações** notifica seu sistema em tempo real sobre mudanças a partir do momento em que ele é habilitado — eventos antigos **não são enviados retroativamente**. ([Tray Developers][1])
+* Se sua integração for para uso amplo (várias lojas), é necessário **homologar o aplicativo** junto à Tray. ([Tray Developers][1])
+
+---
+
+Se quiser, posso te fornecer um **guia com exemplos de chamadas de API (como autenticar, listar pedidos, criar clientes, configurar Webhook, etc.)** usando ferramentas como Postman ou código em JavaScript/Node.js.
+
+[1]: https://developers.tray.com.br/?utm_source=chatgpt.com "Tray Developers: Como Integrar"
+[2]: https://partners.tray.com.br/themes/construindo-seu-template/apis-disponiveis/produtos?utm_source=chatgpt.com "Produtos | Documentação de Temas | Central do Parceiro"
