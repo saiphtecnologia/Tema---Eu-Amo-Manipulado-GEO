@@ -1,0 +1,28 @@
+{% if settings.show_news %}
+    <section class="section-news slide-has-dots">
+        <div class="container">
+            <div class="section-header-news">
+                <div class="section-header-news__content">
+                    <span class="section-header-news__eyebrow">Conteudo e orientacao</span>
+                    <h2 class="title-section">
+                        <a href="/noticias">
+                            {{ settings.title_news }}
+                        </a>
+                    </h2>
+                    {% if settings.subtitle_news %}
+                        <h3 class="subtitle-section">
+                            {{ settings.subtitle_news }}
+                        </h3>
+                    {% endif %}
+                </div>
+                <a href="/noticias" class="section-news__all">
+                    Ver todas as publicacoes
+                </a>
+            </div>
+            <div class="news-content swiper-container hide-dots-desk">
+                <div class="swiper-wrapper"></div>
+                <div class="dots"></div>
+            </div>
+        </div>
+    </section>
+{% endif %}

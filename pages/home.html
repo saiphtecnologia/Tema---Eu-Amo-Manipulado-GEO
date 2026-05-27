@@ -43,33 +43,10 @@
         'quantity' : settings.showcase_quantity_3
     } %}
 
+    {% element 'snippets/home-news' %}
+
 
     {% element 'snippets/brands' %}
-
-
-    {% for page in pages.custom %}
-        {% if page.slug == "noticias" and settings.show_news %}
-            <div class="section-news slide-has-dots">
-                <div class="container">
-                    <div class="section-header">
-                        <h2 class="title-section">
-                            <a href="{{ page.url }}">
-                                {{ settings.title_news }}
-                            </a>
-                        </h2>
-                        <h3 class="subtitle-section">
-                            {{ settings.subtitle_news }}
-                        </h3>
-                    </div>
-                    <div class="news-content swiper-container hide-dots-desk">
-                        <div class="swiper-wrapper"></div>
-                        <div class="dots"></div>
-                    </div>
-
-                </div>
-            </div>
-        {% endif %}
-    {% endfor %}
 
     {% for pages in pages.custom %}
         {% if pages.info == "depoimentos_de_clientes" and settings.show_reviews %}

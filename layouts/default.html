@@ -144,6 +144,7 @@
                         {% set title = '' %}
                         {% set is_faq_page = pages.current == 'perguntas-frequentes' %}
                         {% set is_llms_page = pages.current in ['llms', 'inteligencia-artificial'] %}
+                        {% set is_news_single_page = 'noticia' in pages.current and 'busca_noticias' not in pages.current %}
                         {% set is_standard_custom_page = false %}
 
                         {% for page in pages.custom %}
@@ -186,6 +187,10 @@
                                 </section>
                             {% else %}
                                 {{ content_for_layout }}
+                            {% endif %}
+
+                            {% if is_news_single_page %}
+                                {% element 'snippets/blog-post-footer' %}
                             {% endif %}
 
                             {% if pages.current in ['empresa', 'company', 'seguranca', 'tempo-de-garantia', 'trocas-e-devolucoes', 'o-que-e-farmacia-de-manipulacao', 'porque-escolher-a-farmacia-itauna', 'como-funciona-a-manipulacao', 'perguntas-frequentes'] %}

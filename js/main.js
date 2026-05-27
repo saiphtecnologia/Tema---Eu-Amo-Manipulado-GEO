@@ -1941,6 +1941,32 @@
 
         },
 
+        organizeSingleNewsPage: function(){
+
+            let footer = $('.blog-post-footer').first();
+            let board = $('.page-noticia .board').first();
+            let relatedProducts = $('.page-noticia #ProdBlock.prodBox').first();
+            let relatedIsAfterBoard = false;
+
+            if(!footer.length || !board.length){
+                return;
+            }
+
+            if(relatedProducts.length){
+                relatedIsAfterBoard = Boolean(board.get(0).compareDocumentPosition(relatedProducts.get(0)) & 4);
+            }
+
+            if(relatedProducts.length && relatedIsAfterBoard){
+                footer.insertBefore(relatedProducts);
+            }
+            else{
+                footer.insertAfter(board);
+            }
+
+            $('.page-noticia .page-content').addClass('show');
+
+        },
+
 
         /* Contact page */
         organizeContactPage: function(){
@@ -2915,6 +2941,7 @@
 
         else if ($('html').hasClass('page-noticia')){
             theme.generateBreadcrumb('news-page');
+            theme.organizeSingleNewsPage();
         }
 
 
