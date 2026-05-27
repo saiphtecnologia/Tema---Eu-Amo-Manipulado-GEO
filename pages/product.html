@@ -36,11 +36,10 @@
                 </div>
             </div>
 
-            <ul class="product-thumbs swiper-carousel {% if product.images | length > 4 %} show-arrows {% endif %}">
-                <div class="thumbs-list swiper-container hide-dots-desk ">
-                    <div class="swiper-wrapper">
-
-                        {% if product.images | length > 1 %}
+            {% if product.images | length > 1 %}
+                <ul class="product-thumbs swiper-carousel {% if product.images | length > 4 %} show-arrows {% endif %}">
+                    <div class="thumbs-list swiper-container hide-dots-desk ">
+                        <div class="swiper-wrapper">
                             {% for images in product.images %}
                                 <li class="swiper-slide {% if loop.first -%} active {%- endif %}" data-index="{{ loop.index }}">
                                     <div class="thumb">
@@ -48,21 +47,20 @@
                                     </div>
                                 </li>
                             {% endfor %}
-                        {% endif %}
+                        </div>
+                        <div class="dots"></div>
+                    </div>
+                    <div class="controls">
+                        <div class="prev">
+                            <i class="icon icon-arrow-left"></i>
+                        </div>
+                        <div class="next">
+                            <i class="icon icon-arrow-right"></i>
+                        </div>
 
                     </div>
-                    <div class="dots"></div>
-                </div>
-                <div class="controls">
-                    <div class="prev">
-                        <i class="icon icon-arrow-left"></i>
-                    </div>
-                    <div class="next">
-                        <i class="icon icon-arrow-right"></i>
-                    </div>
-
-                </div>
-            </ul>
+                </ul>
+            {% endif %}
 
         </div>
 
@@ -220,9 +218,12 @@
 
                     {% endif %}
 
-                    <div class="product-gifts">
-                        {{ productHelper.gifts() }}
-                    </div>
+                    {% set productGifts = productHelper.gifts() %}
+                    {% if productGifts %}
+                        <div class="product-gifts">
+                            {{ productGifts }}
+                        </div>
+                    {% endif %}
 
                     {% if product.is_kit %}
                         <div class="product-kit">

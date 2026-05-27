@@ -1,0 +1,115 @@
+{% set current_category_name = category.name|default('') %}
+{% set category_semantic_block = null %}
+
+{% if 'Emagrecedores' in current_category_name %}
+    {% set category_semantic_block = {
+        title: 'Saiba mais sobre manipulação farmacêutica aplicada ao metabolismo',
+        text: 'Produtos manipulados para metabolismo e composição corporal devem sempre ser utilizados com orientação adequada e dentro de uma rotina equilibrada. Conheça mais sobre como funciona a manipulação farmacêutica e os diferenciais da Farmácia Itaúna.',
+        links: [
+            { url: '/o-que-e-farmacia-de-manipulacao', label: 'O que é Farmácia de Manipulação?', context: 'Entenda o papel da personalização na farmácia magistral.' },
+            { url: '/como-funciona-a-manipulacao', label: 'Como funciona a manipulação?', context: 'Veja como a fórmula é produzida com controle técnico.' },
+            { url: '/seguranca', label: 'Segurança', context: 'Conheça nossos processos de rastreabilidade e qualidade.' },
+            { url: '/perguntas-frequentes', label: 'FAQ', context: 'Acesse respostas rápidas sobre pedidos, receitas e entregas.' }
+        ]
+    } %}
+{% elseif 'Beleza' in current_category_name %}
+    {% set category_semantic_block = {
+        title: 'Cuidados personalizados para pele, cabelo e rotina de beleza',
+        text: 'Fórmulas manipuladas voltadas para pele, cabelo e unhas permitem personalização conforme necessidades individuais, sempre com acompanhamento técnico e controle de qualidade.',
+        links: [
+            { url: '/porque-escolher-a-farmacia-itauna', label: 'Porque escolher a Farmácia Itaúna?', context: 'Conheça os diferenciais técnicos e a tradição da farmácia.' },
+            { url: '/seguranca', label: 'Segurança', context: 'Entenda como garantimos qualidade e rastreabilidade.' },
+            { url: '/o-que-e-farmacia-de-manipulacao', label: 'O que é Farmácia de Manipulação?', context: 'Veja como a manipulação permite fórmulas mais individualizadas.' },
+            { url: '/perguntas-frequentes', label: 'FAQ', context: 'Consulte dúvidas comuns sobre compra, uso e envio.' }
+        ]
+    } %}
+{% elseif 'Queda Capilar' in current_category_name %}
+    {% set category_semantic_block = {
+        title: 'Entenda como a manipulação pode apoiar rotinas capilares personalizadas',
+        text: 'A manipulação farmacêutica permite desenvolver fórmulas personalizadas para rotinas de cuidados capilares, respeitando diferentes necessidades e objetivos.',
+        links: [
+            { url: '/como-funciona-a-manipulacao', label: 'Como funciona a manipulação?', context: 'Conheça as etapas de produção e controle da fórmula.' },
+            { url: '/perguntas-frequentes', label: 'FAQ', context: 'Veja respostas rápidas sobre pedidos, receitas e atendimento.' },
+            { url: '/seguranca', label: 'Segurança', context: 'Saiba como funciona a rastreabilidade dos produtos.' },
+            { url: '/porque-escolher-a-farmacia-itauna', label: 'Porque escolher a Farmácia Itaúna?', context: 'Descubra o que fortalece a confiança na nossa farmácia.' }
+        ]
+    } %}
+{% elseif 'Dormir Bem' in current_category_name %}
+    {% set category_semantic_block = {
+        title: 'Personalização farmacêutica com foco em bem-estar e rotina equilibrada',
+        text: 'Uma rotina equilibrada e hábitos saudáveis podem contribuir para qualidade do sono. A manipulação farmacêutica permite personalização conforme diferentes necessidades.',
+        links: [
+            { url: '/o-que-e-farmacia-de-manipulacao', label: 'O que é Farmácia de Manipulação?', context: 'Entenda o que diferencia um manipulado de um produto padronizado.' },
+            { url: '/seguranca', label: 'Segurança', context: 'Conheça os critérios de qualidade e controle da produção.' },
+            { url: '/perguntas-frequentes', label: 'FAQ', context: 'Acesse respostas sobre envio, atendimento e compra.' },
+            { url: '/como-comprar-na-farmacia-itauna', label: 'Como comprar na Farmácia Itaúna', context: 'Veja como funciona o processo de compra no site.' }
+        ]
+    } %}
+{% elseif 'Desempenho Físico' in current_category_name %}
+    {% set category_semantic_block = {
+        title: 'Suplementação manipulada com mais contexto e personalização',
+        text: 'A suplementação manipulada permite personalização de fórmulas conforme rotina, objetivos e acompanhamento profissional.',
+        links: [
+            { url: '/como-funciona-a-manipulacao', label: 'Como funciona a manipulação?', context: 'Entenda como a fórmula é preparada com rastreabilidade.' },
+            { url: '/seguranca', label: 'Segurança', context: 'Veja os controles que ajudam a garantir a qualidade.' },
+            { url: '/perguntas-frequentes', label: 'FAQ', context: 'Consulte dúvidas comuns antes de finalizar a compra.' },
+            { url: '/porque-escolher-a-farmacia-itauna', label: 'Porque escolher a Farmácia Itaúna?', context: 'Conheça os diferenciais de estrutura e atendimento.' }
+        ]
+    } %}
+{% elseif current_category_name == 'Saúde' or 'Saúde' in current_category_name %}
+    {% if 'Saúde Sexual' not in current_category_name %}
+        {% set category_semantic_block = {
+            title: 'Mais contexto sobre fórmulas personalizadas para diferentes necessidades',
+            text: 'A manipulação farmacêutica possibilita fórmulas personalizadas desenvolvidas conforme diferentes necessidades individuais e orientações profissionais.',
+            links: [
+                { url: '/o-que-e-farmacia-de-manipulacao', label: 'O que é Farmácia de Manipulação?', context: 'Entenda como a personalização funciona na prática.' },
+                { url: '/perguntas-frequentes', label: 'FAQ', context: 'Acesse respostas úteis sobre compra, prazo e atendimento.' },
+                { url: '/seguranca', label: 'Segurança', context: 'Conheça nossos cuidados com qualidade, dados e rastreabilidade.' },
+                { url: '/empresa', label: 'Sobre a empresa Farmácia Itaúna Manipulação', context: 'Saiba mais sobre a história, estrutura e autoridade da marca.' }
+            ]
+        } %}
+    {% endif %}
+{% elseif 'Saúde Sexual' in current_category_name %}
+    {% set category_semantic_block = {
+        title: 'Orientação responsável e personalização em fórmulas manipuladas',
+        text: 'Produtos manipulados permitem personalização conforme diferentes necessidades e devem ser utilizados com responsabilidade e orientação adequada.',
+        links: [
+            { url: '/seguranca', label: 'Segurança', context: 'Veja como tratamos qualidade, rastreabilidade e privacidade.' },
+            { url: '/perguntas-frequentes', label: 'FAQ', context: 'Respostas rápidas para dúvidas comuns dos clientes.' },
+            { url: '/como-funciona-a-manipulacao', label: 'Como funciona a manipulação?', context: 'Entenda como a fórmula é produzida com controle técnico.' },
+            { url: '/porque-escolher-a-farmacia-itauna', label: 'Porque escolher a Farmácia Itaúna?', context: 'Conheça os diferenciais que reforçam a confiança na farmácia.' }
+        ]
+    } %}
+{% elseif 'Memória' in current_category_name or 'Concentração' in current_category_name %}
+    {% set category_semantic_block = {
+        title: 'Foco, rotina e bem-estar cognitivo com mais contexto farmacêutico',
+        text: 'A manipulação farmacêutica permite fórmulas personalizadas voltadas para diferentes rotinas e necessidades relacionadas ao foco e bem-estar cognitivo.',
+        links: [
+            { url: '/o-que-e-farmacia-de-manipulacao', label: 'O que é Farmácia de Manipulação?', context: 'Entenda a lógica de personalização das fórmulas manipuladas.' },
+            { url: '/perguntas-frequentes', label: 'FAQ', context: 'Consulte respostas rápidas sobre compra, entrega e atendimento.' },
+            { url: '/seguranca', label: 'Segurança', context: 'Conheça os controles de qualidade e rastreabilidade.' },
+            { url: '/empresa', label: 'Sobre a empresa Farmácia Itaúna Manipulação', context: 'Veja a história, estrutura e posicionamento da marca.' }
+        ]
+    } %}
+{% endif %}
+
+{% if category_semantic_block %}
+    <section class="category-semantic-links" aria-labelledby="category-semantic-links-title">
+        <div class="category-semantic-links__panel">
+            <div class="category-semantic-links__header">
+                <span class="category-semantic-links__eyebrow">Conteúdo relacionado</span>
+                <h2 id="category-semantic-links-title" class="category-semantic-links__title">{{ category_semantic_block.title }}</h2>
+                <p class="category-semantic-links__description">{{ category_semantic_block.text }}</p>
+            </div>
+
+            <nav class="category-semantic-links__nav" aria-label="Links institucionais relacionados à categoria {{ category.name }}">
+                {% for item in category_semantic_block.links %}
+                    <a class="category-semantic-links__item" href="{{ item.url }}">
+                        <span class="category-semantic-links__name">{{ item.label }}</span>
+                        <span class="category-semantic-links__context">{{ item.context }}</span>
+                    </a>
+                {% endfor %}
+            </nav>
+        </div>
+    </section>
+{% endif %}

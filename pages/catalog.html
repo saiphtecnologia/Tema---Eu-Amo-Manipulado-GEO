@@ -153,4 +153,10 @@
 
     </div>
 
+    {% if products | length > 0 %}
+        <div class="catalog-semantic-full">
+            {% element 'snippets/category-semantic-links' %}
+        </div>
+    {% endif %}
+
 </div>
