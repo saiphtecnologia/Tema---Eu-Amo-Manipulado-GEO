@@ -1,0 +1,68 @@
+{% set same_as = [] %}
+
+{% if settings.social_instagram %}
+    {% set same_as = same_as | merge([settings.social_instagram]) %}
+{% endif %}
+
+{% if settings.social_facebook %}
+    {% set same_as = same_as | merge([settings.social_facebook]) %}
+{% endif %}
+
+{% if settings.social_youtube %}
+    {% set same_as = same_as | merge([settings.social_youtube]) %}
+{% endif %}
+
+{% if settings.social_tiktok %}
+    {% set same_as = same_as | merge([settings.social_tiktok]) %}
+{% endif %}
+
+{% if settings.social_linkedin %}
+    {% set same_as = same_as | merge([settings.social_linkedin]) %}
+{% endif %}
+
+{% if settings.social_pinterest %}
+    {% set same_as = same_as | merge([settings.social_pinterest]) %}
+{% endif %}
+
+{% if settings.social_twitter %}
+    {% set same_as = same_as | merge([settings.social_twitter]) %}
+{% endif %}
+
+{% set pharmacy_logo = settings.logo ? asset(settings.logo) : asset('img/logo.svg') %}
+{% set pharmacy_phone = settings.phone ? settings.phone : settings.whatsapp_number %}
+{% set pharmacy_phone = pharmacy_phone | replace({'(': '', ')': '', '-': '', ' ': ''}) %}
+{% set pharmacy_phone = pharmacy_phone ? '+55' ~ pharmacy_phone : '' %}
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Pharmacy",
+        "name": "{{ store.name | replace({'"': '\"'}) }}",
+        "url": "{{ store.url }}",
+        "logo": "{{ pharmacy_logo }}",
+        "image": "{{ pharmacy_logo }}"{% if pharmacy_phone or settings.email_contact or same_as | length %},{% endif %}
+        {% if pharmacy_phone %}
+        "telephone": "{{ pharmacy_phone }}"{% if settings.email_contact or same_as | length %},{% endif %}
+        {% endif %}
+        {% if settings.email_contact %}
+        "email": "{{ settings.email_contact }}"{% if same_as | length %},{% endif %}
+        {% endif %}
+        {% if same_as | length %}
+        "sameAs": [
+            {% for social in same_as %}
+                "{{ social }}"{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ],
+        {% endif %}
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Marechal Deodoro, 211",
+            "addressLocality": "Itaúna",
+            "addressRegion": "MG",
+            "postalCode": "35680-056",
+            "addressCountry": "BR"
+        },
+        "areaServed": "BR",
+        "currenciesAccepted": "BRL"
+    }
+</script>

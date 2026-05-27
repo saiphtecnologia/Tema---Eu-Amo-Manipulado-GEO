@@ -1,0 +1,227 @@
+{% set whatsapp_number_unformatted = settings.whatsapp_number | replace({'(': '', ')': '', ' ':'', '-': ''}) %}
+{% set whatsapp_link = "https://wa.me/55#{whatsapp_number_unformatted}" %}
+
+<section class="faq-page" aria-labelledby="faq-page-title">
+    <div class="faq-page__hero">
+        <div class="faq-page__hero-copy">
+            <span class="faq-page__eyebrow">Central de Ajuda</span>
+            <h1 id="faq-page-title" class="faq-page__title">Perguntas Frequentes — Farmácia Itaúna Manipulação</h1>
+            <p class="faq-page__lead">Reunimos aqui as dúvidas mais comuns sobre medicamentos manipulados, sobre como funciona nossa farmácia e sobre como comprar pelo site Eu Amo Manipulado.</p>
+            <p class="faq-page__support">Se você não encontrar a resposta que procura, entre em contato pelo WhatsApp <a href="{{ whatsapp_link }}" target="_blank" rel="noopener noreferrer">(37) 99858-2328</a>.</p>
+        </div>
+
+        <aside class="faq-page__hero-card" aria-label="Informações de confiança">
+            <span class="faq-page__hero-label">Atendimento e segurança</span>
+            <ul class="faq-page__hero-list">
+                <li>Farmácia magistral fundada em 1989</li>
+                <li>AFE ANVISA: 7138671</li>
+                <li>Entrega para todo o Brasil</li>
+            </ul>
+        </aside>
+    </div>
+
+    <div class="faq-page__content">
+        <div class="faq-page__panel">
+            <div class="faq-page__heading">
+                <h2 class="faq-page__section-title">Respostas rápidas e confiáveis</h2>
+                <p class="faq-page__section-text">Conteúdo estruturado para ajudar pacientes, familiares e profissionais a entenderem melhor como funciona a manipulação, a compra online e a entrega dos produtos.</p>
+            </div>
+
+            <div class="faq-page__accordion" itemscope itemtype="https://schema.org/FAQPage">
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" open>
+                    <summary class="faq-item__trigger">
+                        <span class="faq-item__question" itemprop="name">O que é um medicamento manipulado?</span>
+                        <span class="faq-item__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Um medicamento manipulado é produzido de forma personalizada em laboratório farmacêutico, a partir de uma prescrição médica ou nutricional. Diferente dos produtos industrializados, ele é feito especificamente para você — com a dose exata, os ativos certos e a forma farmacêutica mais adequada para o seu tratamento. Na Farmácia Itaúna, cada fórmula é produzida sob supervisão farmacêutica e com controle rigoroso de qualidade.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-item__trigger">
+                        <span class="faq-item__question" itemprop="name">Medicamento manipulado é seguro?</span>
+                        <span class="faq-item__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Sim. Farmácias de manipulação regularizadas pela ANVISA seguem protocolos rígidos de segurança, controle de qualidade e rastreabilidade. A Farmácia Itaúna possui Autorização de Funcionamento da ANVISA (AFE: 7138671), farmacêutico responsável registrado e sistema de pesagem monitorada que elimina o erro humano na produção. Seus medicamentos são rastreados do laboratório até a sua casa.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-item__trigger">
+                        <span class="faq-item__question" itemprop="name">Qual a diferença entre manipulado e industrializado?</span>
+                        <span class="faq-item__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">O industrializado é produzido em larga escala com fórmulas fixas e doses padronizadas. O manipulado é feito especificamente para o paciente, com a dose prescrita pelo médico, podendo combinar diferentes ativos, eliminar componentes indesejados e adaptar a forma de apresentação. Em resumo: o industrializado é para todos. O manipulado é para você.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-item__trigger">
+                        <span class="faq-item__question" itemprop="name">Preciso de receita para comprar?</span>
+                        <span class="faq-item__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Depende do produto. Alguns produtos disponíveis em nossa loja são vendidos sem necessidade de receita. Outros, especialmente medicamentos com princípios ativos controlados ou que exigem prescrição médica, requerem o envio da receita. Em caso de dúvida, entre em contato conosco antes de finalizar o pedido.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-item__trigger">
+                        <span class="faq-item__question" itemprop="name">Como funciona o processo de manipulação?</span>
+                        <span class="faq-item__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Após a confirmação do pedido e o recebimento da receita, quando necessário, nossa equipe técnica analisa a fórmula, seleciona os ativos com rastreabilidade de lote, realiza a pesagem monitorada e produz o medicamento em laboratório próprio, sob supervisão farmacêutica. Após a produção, o produto passa por controle de qualidade e é embalado e enviado ao paciente.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-item__trigger">
+                        <span class="faq-item__question" itemprop="name">Quanto tempo demora para receber meu pedido?</span>
+                        <span class="faq-item__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">O prazo de produção e entrega varia conforme o produto e a forma de envio escolhida. De forma geral, após a confirmação do pagamento e recebimento da receita, quando aplicável, os pedidos são processados e enviados pelos Correios. Recomendamos o envio por SEDEX para maior agilidade. Após o envio, o prazo de entrega depende da sua localização.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-item__trigger">
+                        <span class="faq-item__question" itemprop="name">Como funciona a entrega?</span>
+                        <span class="faq-item__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Realizamos entregas para todo o Brasil pelos Correios. Você pode optar por SEDEX, mais rápido, ou Encomenda Normal, mais econômico. Após o envio, você receberá o código de rastreamento por e-mail para acompanhar a entrega.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-item__trigger">
+                        <span class="faq-item__question" itemprop="name">Quem pode comprar na Farmácia Itaúna?</span>
+                        <span class="faq-item__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Qualquer pessoa maior de idade pode comprar em nosso site. Alguns produtos exigem prescrição médica ou nutricional. Nossa farmácia atende clientes em todo o Brasil, de norte a sul, com entrega pelos Correios.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-item__trigger">
+                        <span class="faq-item__question" itemprop="name">Posso tirar dúvidas antes de comprar?</span>
+                        <span class="faq-item__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Sim. Nossa equipe está disponível pelo WhatsApp (37) 99858-2328 para esclarecer dúvidas sobre produtos, receitas, prazos, formas de pagamento e qualquer outra questão. Atendemos com atenção e responsabilidade farmacêutica.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary class="faq-item__trigger">
+                        <span class="faq-item__question" itemprop="name">A Farmácia Itaúna é regularizada?</span>
+                        <span class="faq-item__icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="faq-item__content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Sim. Somos uma farmácia magistral com todas as autorizações exigidas: Autorização do Ministério da Saúde, AE 1.18278-9, Autorização de Funcionamento de Empresa junto à ANVISA, AFE 7138671, e farmacêutico responsável registrado no CRF, Ivo Henrique Ferreira — CRF 35.127. Fundada em 1989, em Itaúna, Minas Gerais, com mais de 35 anos de tradição.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="faq-page__footer">
+                <p class="faq-page__footer-text">Ainda precisa de ajuda? Nossa equipe pode orientar você sobre receitas, prazos, entregas e produtos.</p>
+                <a class="faq-page__footer-link" href="{{ whatsapp_link }}" target="_blank" rel="noopener noreferrer">Falar com a Farmácia Itaúna no WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "O que é um medicamento manipulado?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Um medicamento manipulado é produzido de forma personalizada em laboratório farmacêutico, a partir de uma prescrição médica ou nutricional. Diferente dos produtos industrializados, ele é feito especificamente para você, com a dose exata, os ativos certos e a forma farmacêutica mais adequada para o seu tratamento. Na Farmácia Itaúna, cada fórmula é produzida sob supervisão farmacêutica e com controle rigoroso de qualidade."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Medicamento manipulado é seguro?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Sim. Farmácias de manipulação regularizadas pela ANVISA seguem protocolos rígidos de segurança, controle de qualidade e rastreabilidade. A Farmácia Itaúna possui Autorização de Funcionamento da ANVISA, AFE 7138671, farmacêutico responsável registrado e sistema de pesagem monitorada que elimina o erro humano na produção. Seus medicamentos são rastreados do laboratório até a sua casa."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Qual a diferença entre manipulado e industrializado?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "O industrializado é produzido em larga escala com fórmulas fixas e doses padronizadas. O manipulado é feito especificamente para o paciente, com a dose prescrita pelo médico, podendo combinar diferentes ativos, eliminar componentes indesejados e adaptar a forma de apresentação. Em resumo: o industrializado é para todos. O manipulado é para você."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Preciso de receita para comprar?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Depende do produto. Alguns produtos disponíveis em nossa loja são vendidos sem necessidade de receita. Outros, especialmente medicamentos com princípios ativos controlados ou que exigem prescrição médica, requerem o envio da receita. Em caso de dúvida, entre em contato conosco antes de finalizar o pedido."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Como funciona o processo de manipulação?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Após a confirmação do pedido e o recebimento da receita, quando necessário, nossa equipe técnica analisa a fórmula, seleciona os ativos com rastreabilidade de lote, realiza a pesagem monitorada e produz o medicamento em laboratório próprio, sob supervisão farmacêutica. Após a produção, o produto passa por controle de qualidade e é embalado e enviado ao paciente."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Quanto tempo demora para receber meu pedido?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "O prazo de produção e entrega varia conforme o produto e a forma de envio escolhida. De forma geral, após a confirmação do pagamento e recebimento da receita, quando aplicável, os pedidos são processados e enviados pelos Correios. Recomendamos o envio por SEDEX para maior agilidade. Após o envio, o prazo de entrega depende da sua localização."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Como funciona a entrega?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Realizamos entregas para todo o Brasil pelos Correios. Você pode optar por SEDEX, mais rápido, ou Encomenda Normal, mais econômico. Após o envio, você receberá o código de rastreamento por e-mail para acompanhar a entrega."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Quem pode comprar na Farmácia Itaúna?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Qualquer pessoa maior de idade pode comprar em nosso site. Alguns produtos exigem prescrição médica ou nutricional. Nossa farmácia atende clientes em todo o Brasil, de norte a sul, com entrega pelos Correios."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Posso tirar dúvidas antes de comprar?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Sim. Nossa equipe está disponível pelo WhatsApp (37) 99858-2328 para esclarecer dúvidas sobre produtos, receitas, prazos, formas de pagamento e qualquer outra questão. Atendemos com atenção e responsabilidade farmacêutica."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "A Farmácia Itaúna é regularizada?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Sim. Somos uma farmácia magistral com todas as autorizações exigidas: Autorização do Ministério da Saúde, AE 1.18278-9, Autorização de Funcionamento de Empresa junto à ANVISA, AFE 7138671, e farmacêutico responsável registrado no CRF, Ivo Henrique Ferreira — CRF 35.127. Fundada em 1989, em Itaúna, Minas Gerais, com mais de 35 anos de tradição."
+                    }
+                }
+            ]
+        }
+    </script>
+</section>
