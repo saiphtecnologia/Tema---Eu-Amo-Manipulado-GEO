@@ -1,0 +1,79 @@
+{% set whatsapp_number_unformatted = settings.whatsapp_number | replace({'(': '', ')': '', ' ':'', '-': ''}) %}
+{% set whatsapp_link = "https://wa.me/55#{whatsapp_number_unformatted}" %}
+
+<section class="product-authority" aria-labelledby="product-authority-title">
+    <div class="container">
+        <div class="product-authority__panel">
+            <div class="product-authority__header">
+                <span class="product-authority__eyebrow">Confiança e procedência</span>
+                <h2 id="product-authority-title" class="product-authority__title">Por que comprar na Farmácia Itaúna é diferente?</h2>
+                <p class="product-authority__subtitle">Estruturamos este cuidado para reforçar segurança, autoridade farmacêutica e contexto real da operação em toda a jornada de compra.</p>
+            </div>
+
+            <div class="product-authority__grid">
+                <article class="product-authority__card">
+                    <div class="product-authority__icon">
+                        <i class="icon icon-reviews" aria-hidden="true"></i>
+                    </div>
+                    <p>Mais de 35 anos de tradição em manipulação farmacêutica</p>
+                </article>
+
+                <article class="product-authority__card">
+                    <div class="product-authority__icon">
+                        <i class="icon icon-reward" aria-hidden="true"></i>
+                    </div>
+                    <p>Laboratório próprio e produção monitorada em Itaúna, MG</p>
+                </article>
+
+                <article class="product-authority__card">
+                    <div class="product-authority__icon">
+                        <i class="icon icon-security" aria-hidden="true"></i>
+                    </div>
+                    <p>Pesagem monitorada com rastreabilidade total de cada fórmula</p>
+                </article>
+
+                <article class="product-authority__card">
+                    <div class="product-authority__icon">
+                        <i class="icon icon-help" aria-hidden="true"></i>
+                    </div>
+                    <p>Farmacêutico responsável em todas as etapas da produção</p>
+                </article>
+
+                <article class="product-authority__card">
+                    <div class="product-authority__icon">
+                        <i class="icon icon-card" aria-hidden="true"></i>
+                    </div>
+                    <p>Autorização ANVISA — AFE: 7138671 | AE: 1.18278-9</p>
+                </article>
+
+                <article class="product-authority__card">
+                    <div class="product-authority__icon">
+                        <i class="icon icon-truck" aria-hidden="true"></i>
+                    </div>
+                    <p>Entrega para todo o Brasil pelos Correios</p>
+                </article>
+            </div>
+
+            <div class="product-authority__footer">
+                <div class="product-authority__about" itemscope itemtype="https://schema.org/Pharmacy">
+                    <p class="product-authority__about-text">
+                        <span itemprop="name">A Farmácia Itaúna Manipulação</span> é uma farmácia magistral localizada na
+                        <span itemprop="streetAddress">Rua Marechal Deodoro, 211</span> —
+                        <span itemprop="addressLocality">Centro, Itaúna</span>,
+                        <span itemprop="addressRegion">Minas Gerais</span> —
+                        CEP <span itemprop="postalCode">35680-066</span>.
+                        Atendemos clientes em todo o Brasil pelo site
+                        <span itemprop="url">euamomanipulado.com.br</span> desde 1989.
+                    </p>
+                    <meta itemprop="telephone" content="+5537998582328">
+                    <meta itemprop="addressCountry" content="BR">
+                </div>
+
+                <a class="product-authority__cta" href="{{ whatsapp_link }}" target="_blank" rel="noopener noreferrer">
+                    <i class="icon icon-whatsapp" aria-hidden="true"></i>
+                    <span>Atendimento humano pelo WhatsApp (37) 99858-2328</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

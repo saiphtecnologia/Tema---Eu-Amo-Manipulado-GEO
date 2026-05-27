@@ -1,0 +1,78 @@
+{% set whatsapp_number_unformatted = settings.whatsapp_number | replace({'(': '', ')': '', ' ':'', '-': ''}) %}
+{% set whatsapp_link = "https://wa.me/55#{whatsapp_number_unformatted}" %}
+{% set faq_items = [
+    { question: settings.product_faq_question_1, answer: settings.product_faq_answer_1 },
+    { question: settings.product_faq_question_2, answer: settings.product_faq_answer_2 },
+    { question: settings.product_faq_question_3, answer: settings.product_faq_answer_3 },
+    { question: settings.product_faq_question_4, answer: settings.product_faq_answer_4 },
+    { question: settings.product_faq_question_5, answer: settings.product_faq_answer_5 },
+    { question: settings.product_faq_question_6, answer: settings.product_faq_answer_6 },
+    { question: settings.product_faq_question_7, answer: settings.product_faq_answer_7 },
+    { question: settings.product_faq_question_8, answer: settings.product_faq_answer_8 },
+    { question: settings.product_faq_question_9, answer: settings.product_faq_answer_9 }
+] %}
+
+{% set faq_count = 0 %}
+{% for item in faq_items %}
+    {% if item.question and item.answer %}
+        {% set faq_count = faq_count + 1 %}
+    {% endif %}
+{% endfor %}
+
+{% if settings.show_product_faq and faq_count > 0 %}
+    <section class="product-faq" aria-labelledby="product-faq-title">
+        <div class="container">
+            <div class="product-faq__panel">
+                <div class="product-faq__heading">
+                    <h2 id="product-faq-title" class="product-faq__title">{{ settings.product_faq_title ? settings.product_faq_title : 'Perguntas frequentes sobre nossos produtos manipulados' }}</h2>
+                    <p class="product-faq__subtitle">{{ settings.product_faq_subtitle ? settings.product_faq_subtitle : 'Conteúdo estruturado para ajudar pacientes, familiares e profissionais a entenderem melhor como funciona a manipulação, a compra online e a entrega dos produtos.' }}</p>
+                </div>
+
+                <div class="product-faq__accordion" itemscope itemtype="https://schema.org/FAQPage">
+                    {% for item in faq_items %}
+                        {% if item.question and item.answer %}
+                            <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" {% if loop.first %}open{% endif %}>
+                                <summary class="faq-item__trigger">
+                                    <span class="faq-item__question" itemprop="name">{{ item.question }}</span>
+                                    <span class="faq-item__icon" aria-hidden="true"></span>
+                                </summary>
+                                <div class="faq-item__content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                    <p itemprop="text">{{ item.answer }}</p>
+                                </div>
+                            </details>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                <div class="product-faq__footer">
+                    <p class="product-faq__footer-text">{{ settings.product_faq_footer_text ? settings.product_faq_footer_text : 'Ainda precisa de ajuda? Nossa equipe pode orientar você sobre receitas, prazos, entregas e produtos.' }}</p>
+                    <a class="product-faq__footer-link" href="{{ whatsapp_link }}" target="_blank" rel="noopener noreferrer">{{ settings.product_faq_button_text ? settings.product_faq_button_text : 'Falar com a Farmácia Itaúna no WhatsApp' }}</a>
+                </div>
+            </div>
+        </div>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {% set first_schema = true %}
+                    {% for item in faq_items %}
+                        {% if item.question and item.answer %}
+                            {% if not first_schema %},{% endif %}
+                            {
+                                "@type": "Question",
+                                "name": "{{ item.question | replace({'"': '\"'}) }}",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "{{ item.answer | replace({'"': '\"'}) }}"
+                                }
+                            }
+                            {% set first_schema = false %}
+                        {% endif %}
+                    {% endfor %}
+                ]
+            }
+        </script>
+    </section>
+{% endif %}

@@ -1748,6 +1748,20 @@
         opacity: 1;
     }
 
+    textarea[name^="product_faq_answer_"]{
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 140px;
+        border: 1px solid #f1f1f1;
+        border-radius: 6px;
+        display: block;
+        box-shadow: none;
+        padding: 15px 20px;
+        resize: vertical;
+        background-color: #fff;
+    }
+
     .input-area select{
         font-size: 12px;
         height: 50px;
@@ -3203,7 +3217,7 @@
                                         <input type="text" placeholder="" name="maps_google">
                                     </label>
 
-                                    <div class="box-section">
+                                    <div class="box-section product-faq-settings">
                                         <div class="title flex justify-between align-center">
                                             <span>Botão de atendimento via WhatsApp</span>
                                             <label class="check-drag">
@@ -3221,7 +3235,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="box-section">
+                                    <div class="box-section product-faq-settings">
                                         <div class="title flex justify-between align-center">
                                             <span>Qual o lado que o botão de atendimento via WhatsApp será exibido?</span>
                                         </div>
@@ -4839,7 +4853,7 @@
                                 </div>
                                 <div class="tab-content">
 
-                                    <div class="box-section">
+                                    <div class="box-section product-faq-settings">
                                         <div class="title flex justify-between align-center">
                                             <span>Deseja pausar o slide ao passar o mouse sobre ?</span>
                                             <label class="check-drag">
@@ -4848,7 +4862,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="box-section">
+                                    <div class="box-section product-faq-settings">
                                         <div class="title flex justify-between align-center">
                                             <span>Efeito fade na transição de banners</span>
                                             <label class="check-drag">
@@ -4858,7 +4872,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="box-section">
+                                    <div class="box-section product-faq-settings">
                                         <div class="title flex justify-between align-center">
                                             <span>Tempo de permanência do slide</span>
                                         </div>
@@ -4932,7 +4946,7 @@
                                 </div>
                                 <div class="tab-content">
 
-                                    <div class="box-section">
+                                    <div class="box-section product-faq-settings">
                                         <div class="title flex justify-between align-center">
                                                 <span>
                                                     Exibir campo de rastreio
@@ -4974,7 +4988,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="box-section">
+                                    <div class="box-section product-faq-settings">
                                         <div class="title flex justify-between align-center">
                                                 <span>
                                                     Mensagem da barra superior
@@ -5034,7 +5048,7 @@
                                 </div>
                                 <div class="tab-content">
 
-                                    <div class="box-section">
+                                    <div class="box-section product-faq-settings">
                                         <div class="title flex justify-between align-center">
                                             <span>Exibir ícones no menu de categorias <span class="ic-search" data-desc="Ícone exibido ao lado da categoria pai"></span></span>
                                             <label class="check-drag">
@@ -5043,7 +5057,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="box-section">
+                                    <div class="box-section product-faq-settings">
                                         <div class="title flex justify-between align-center">
                                             <span>Exibir ícones no menu de categorias na parte superior <span class="ic-search" data-desc="Os ícones serão exibidos acima do nome da categoria. Em dispositivos móveis os ícones sempre serão exibidos ao lado do nome da categoria."></span></span>
                                             <label class="check-drag">
@@ -5109,7 +5123,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="box-section mb-0">
+                                    <div class="box-section product-faq-settings mb-0">
                                         <div class="title flex justify-between align-center">
                                                 <span>
                                                     Exibir produto dentro do menu
@@ -6824,6 +6838,166 @@
                                                 <span class="name">Título</span>
                                                 <input type="text" placeholder="Digite o título" class="encode-characters">
                                                 <input type="hidden" name="related_products_title">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="box-section">
+                                        <div class="title flex justify-between align-center">
+                                                <span>
+                                                    FAQ Produtos
+                                                    <span class="ic-search" data-desc="Bloco padrao de perguntas frequentes exibido abaixo da pagina do produto, com foco em conversao, confianca e GEO."></span>
+                                                </span>
+                                            <label class="check-drag">
+                                                <input type="checkbox" name="show_product_faq" value="1">
+                                                <span class="icon"></span>
+                                            </label>
+                                        </div>
+                                        <div class="content-section">
+                                            <label class="input-area">
+                                                <span class="name">Titulo</span>
+                                                <input type="text" placeholder="Digite o titulo" class="encode-characters">
+                                                <input type="hidden" name="product_faq_title">
+                                            </label>
+                                            <label class="input-area">
+                                                <span class="name">Subtitulo</span>
+                                                <input type="text" placeholder="Digite o subtitulo" class="encode-characters">
+                                                <input type="hidden" name="product_faq_subtitle">
+                                            </label>
+                                            <label class="input-area">
+                                                <span class="name">Texto final</span>
+                                                <input type="text" placeholder="Digite o texto final" class="encode-characters">
+                                                <input type="hidden" name="product_faq_footer_text">
+                                            </label>
+                                            <label class="input-area mb-0">
+                                                <span class="name">Texto do botao</span>
+                                                <input type="text" placeholder="Digite o texto do botao" class="encode-characters">
+                                                <input type="hidden" name="product_faq_button_text">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="box-section">
+                                        <div class="title flex justify-between align-center"><span>Pergunta 1</span></div>
+                                        <div class="content-section">
+                                            <label class="input-area">
+                                                <span class="name">Pergunta</span>
+                                                <input type="text" placeholder="Digite a pergunta" class="encode-characters">
+                                                <input type="hidden" name="product_faq_question_1">
+                                            </label>
+                                            <label class="input-area mb-0">
+                                                <span class="name">Resposta</span>
+                                                <textarea name="product_faq_answer_1" rows="5"></textarea>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="box-section">
+                                        <div class="title flex justify-between align-center"><span>Pergunta 2</span></div>
+                                        <div class="content-section">
+                                            <label class="input-area">
+                                                <span class="name">Pergunta</span>
+                                                <input type="text" placeholder="Digite a pergunta" class="encode-characters">
+                                                <input type="hidden" name="product_faq_question_2">
+                                            </label>
+                                            <label class="input-area mb-0">
+                                                <span class="name">Resposta</span>
+                                                <textarea name="product_faq_answer_2" rows="5"></textarea>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="box-section">
+                                        <div class="title flex justify-between align-center"><span>Pergunta 3</span></div>
+                                        <div class="content-section">
+                                            <label class="input-area">
+                                                <span class="name">Pergunta</span>
+                                                <input type="text" placeholder="Digite a pergunta" class="encode-characters">
+                                                <input type="hidden" name="product_faq_question_3">
+                                            </label>
+                                            <label class="input-area mb-0">
+                                                <span class="name">Resposta</span>
+                                                <textarea name="product_faq_answer_3" rows="5"></textarea>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="box-section">
+                                        <div class="title flex justify-between align-center"><span>Pergunta 4</span></div>
+                                        <div class="content-section">
+                                            <label class="input-area">
+                                                <span class="name">Pergunta</span>
+                                                <input type="text" placeholder="Digite a pergunta" class="encode-characters">
+                                                <input type="hidden" name="product_faq_question_4">
+                                            </label>
+                                            <label class="input-area mb-0">
+                                                <span class="name">Resposta</span>
+                                                <textarea name="product_faq_answer_4" rows="5"></textarea>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="box-section">
+                                        <div class="title flex justify-between align-center"><span>Pergunta 5</span></div>
+                                        <div class="content-section">
+                                            <label class="input-area">
+                                                <span class="name">Pergunta</span>
+                                                <input type="text" placeholder="Digite a pergunta" class="encode-characters">
+                                                <input type="hidden" name="product_faq_question_5">
+                                            </label>
+                                            <label class="input-area mb-0">
+                                                <span class="name">Resposta</span>
+                                                <textarea name="product_faq_answer_5" rows="5"></textarea>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="box-section">
+                                        <div class="title flex justify-between align-center"><span>Pergunta 6</span></div>
+                                        <div class="content-section">
+                                            <label class="input-area">
+                                                <span class="name">Pergunta</span>
+                                                <input type="text" placeholder="Digite a pergunta" class="encode-characters">
+                                                <input type="hidden" name="product_faq_question_6">
+                                            </label>
+                                            <label class="input-area mb-0">
+                                                <span class="name">Resposta</span>
+                                                <textarea name="product_faq_answer_6" rows="5"></textarea>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="box-section">
+                                        <div class="title flex justify-between align-center"><span>Pergunta 7</span></div>
+                                        <div class="content-section">
+                                            <label class="input-area">
+                                                <span class="name">Pergunta</span>
+                                                <input type="text" placeholder="Digite a pergunta" class="encode-characters">
+                                                <input type="hidden" name="product_faq_question_7">
+                                            </label>
+                                            <label class="input-area mb-0">
+                                                <span class="name">Resposta</span>
+                                                <textarea name="product_faq_answer_7" rows="5"></textarea>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="box-section">
+                                        <div class="title flex justify-between align-center"><span>Pergunta 8</span></div>
+                                        <div class="content-section">
+                                            <label class="input-area">
+                                                <span class="name">Pergunta</span>
+                                                <input type="text" placeholder="Digite a pergunta" class="encode-characters">
+                                                <input type="hidden" name="product_faq_question_8">
+                                            </label>
+                                            <label class="input-area mb-0">
+                                                <span class="name">Resposta</span>
+                                                <textarea name="product_faq_answer_8" rows="5"></textarea>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="box-section mb-0">
+                                        <div class="title flex justify-between align-center"><span>Pergunta 9</span></div>
+                                        <div class="content-section">
+                                            <label class="input-area">
+                                                <span class="name">Pergunta</span>
+                                                <input type="text" placeholder="Digite a pergunta" class="encode-characters">
+                                                <input type="hidden" name="product_faq_question_9">
+                                            </label>
+                                            <label class="input-area mb-0">
+                                                <span class="name">Resposta</span>
+                                                <textarea name="product_faq_answer_9" rows="5"></textarea>
                                             </label>
                                         </div>
                                     </div>
