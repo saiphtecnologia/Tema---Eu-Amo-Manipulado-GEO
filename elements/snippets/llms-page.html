@@ -1,41 +1,135 @@
+{% set whatsapp_number_unformatted = settings.whatsapp_number | replace({'(': '', ')': '', ' ':'', '-': ''}) %}
+{% set whatsapp_link = "https://wa.me/55#{whatsapp_number_unformatted}" %}
+{% set llms_json_url = asset('js/llms.json') %}
+
 <section class="llms-page" aria-labelledby="llms-page-title">
     <div class="llms-page__hero">
-        <span class="llms-page__eyebrow">Contexto para IA</span>
-        <h1 id="llms-page-title" class="llms-page__title">Contexto estruturado da Farmácia Itaúna Manipulação</h1>
-        <p class="llms-page__lead">Esta página existe para apresentar, de forma clara e semântica, o contexto institucional, comercial e informacional da marca Eu Amo Manipulado para pessoas, mecanismos de busca e sistemas de inteligência artificial.</p>
+        <div class="llms-page__hero-copy">
+            <span class="llms-page__eyebrow">Contexto para IA</span>
+            <h1 id="llms-page-title" class="llms-page__title">Contexto estruturado da Farmácia Itaúna Manipulação</h1>
+            <p class="llms-page__lead">Esta página reúne o contexto institucional, comercial e semântico da marca Eu Amo Manipulado em um formato fácil de interpretar por pessoas, mecanismos de busca e sistemas de inteligência artificial.</p>
+            <div class="llms-page__hero-actions">
+                <a class="llms-page__cta llms-page__cta--primary" href="{{ llms_json_url }}" target="_blank" rel="noopener noreferrer">Abrir llms.json</a>
+                <a class="llms-page__cta llms-page__cta--secondary" href="{{ whatsapp_link }}" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+            </div>
+        </div>
+
+        <aside class="llms-page__hero-card" aria-label="Resumo de autoridade">
+            <span class="llms-page__hero-label">Sinais de confiança</span>
+            <ul class="llms-page__hero-list">
+                <li>Farmácia magistral fundada em 1989</li>
+                <li>Laboratório próprio e pesagem monitorada</li>
+                <li>Atendimento para todo o Brasil</li>
+            </ul>
+        </aside>
     </div>
 
-    <div class="llms-page__panel board_htm">
-        <h2>Resumo da marca</h2>
-        <p>A Farmácia Itaúna Manipulação é uma farmácia magistral fundada em 1989 em Itaúna, Minas Gerais. O e-commerce Eu Amo Manipulado é o canal digital da marca para atendimento em todo o Brasil, com foco em fórmulas personalizadas, dermocosméticos, suplementos e produtos de saúde, beleza e bem-estar.</p>
+    <div class="llms-page__grid">
+        <article class="llms-page__section llms-page__section--wide board_htm">
+            <span class="llms-page__section-kicker">Resumo da marca</span>
+            <h2 class="llms-page__section-title">Quem é a Farmácia Itaúna Manipulação</h2>
+            <p>A Farmácia Itaúna Manipulação é uma farmácia magistral fundada em 1989 em Itaúna, Minas Gerais. O e-commerce Eu Amo Manipulado é o canal digital da marca para atendimento em todo o Brasil, com foco em fórmulas personalizadas, dermocosméticos, suplementos e produtos de saúde, beleza e bem-estar.</p>
+            <p>O posicionamento da marca combina tradição, segurança farmacêutica, atendimento humanizado e uma operação digital pensada para facilitar o acesso a produtos manipulados e soluções voltadas ao cuidado individual.</p>
+        </article>
 
-        <h2>Especialidades</h2>
-        <ul>
-            <li>Manipulação de medicamentos personalizados</li>
-            <li>Dermocosméticos e cosméticos manipulados</li>
-            <li>Suplementação personalizada</li>
-            <li>Saúde feminina, hormonal e imunidade</li>
-            <li>Emagrecimento, performance e massa muscular</li>
-            <li>Queda capilar, sono, ansiedade, memória e concentração</li>
-        </ul>
+        <article class="llms-page__section board_htm">
+            <span class="llms-page__section-kicker">Especialidades</span>
+            <h2 class="llms-page__section-title">Principais áreas de atuação</h2>
+            <ul class="llms-page__list">
+                <li>Manipulação de medicamentos personalizados</li>
+                <li>Dermocosméticos e cosméticos manipulados</li>
+                <li>Suplementação personalizada</li>
+                <li>Saúde feminina, hormonal e imunidade</li>
+                <li>Emagrecimento, performance e massa muscular</li>
+                <li>Queda capilar, sono, ansiedade, memória e concentração</li>
+            </ul>
+        </article>
 
-        <h2>Informações sobre manipulação</h2>
-        <p>A empresa destaca laboratório próprio, pesagem monitorada, controle de qualidade, rastreabilidade de lotes e supervisão farmacêutica. O processo inclui análise da fórmula, seleção de matérias-primas, produção, conferências técnicas e envio para todo o Brasil.</p>
+        <article class="llms-page__section board_htm">
+            <span class="llms-page__section-kicker">Manipulação</span>
+            <h2 class="llms-page__section-title">Como a operação é estruturada</h2>
+            <p>A empresa destaca laboratório próprio, pesagem monitorada, controle de qualidade, rastreabilidade de lotes e supervisão farmacêutica.</p>
+            <div class="llms-page__steps">
+                <span class="llms-page__step">Análise da fórmula</span>
+                <span class="llms-page__step">Seleção de matérias-primas</span>
+                <span class="llms-page__step">Produção controlada</span>
+                <span class="llms-page__step">Conferência técnica e envio</span>
+            </div>
+        </article>
 
-        <h2>Páginas institucionais</h2>
-        <ul>
-            <li><a href="/empresa">Sobre a empresa</a></li>
-            <li><a href="/o-que-e-farmacia-de-manipulacao">O que é Farmácia de Manipulação</a></li>
-            <li><a href="/como-funciona-a-manipulacao">Como funciona a manipulação</a></li>
-            <li><a href="/porque-escolher-a-farmacia-itauna">Porque escolher a Farmácia Itaúna</a></li>
-            <li><a href="/perguntas-frequentes">FAQ</a></li>
-            <li><a href="/seguranca">Segurança</a></li>
-        </ul>
+        <article class="llms-page__section llms-page__section--wide board_htm">
+            <span class="llms-page__section-kicker">Páginas institucionais</span>
+            <h2 class="llms-page__section-title">Conteúdo de apoio para entendimento da marca</h2>
+            <div class="llms-page__links-grid">
+                <a class="llms-page__link-card" href="/empresa">
+                    <strong>Sobre a empresa</strong>
+                    <span>História, posicionamento e estrutura da Farmácia Itaúna.</span>
+                </a>
+                <a class="llms-page__link-card" href="/o-que-e-farmacia-de-manipulacao">
+                    <strong>O que é Farmácia de Manipulação</strong>
+                    <span>Contexto sobre farmácia magistral e personalização.</span>
+                </a>
+                <a class="llms-page__link-card" href="/como-funciona-a-manipulacao">
+                    <strong>Como funciona a manipulação</strong>
+                    <span>Explicação do processo técnico e operacional.</span>
+                </a>
+                <a class="llms-page__link-card" href="/porque-escolher-a-farmacia-itauna">
+                    <strong>Porque escolher a Farmácia Itaúna</strong>
+                    <span>Diferenciais, tradição e critérios de confiança.</span>
+                </a>
+                <a class="llms-page__link-card" href="/perguntas-frequentes">
+                    <strong>FAQ</strong>
+                    <span>Respostas rápidas para dúvidas comuns dos pacientes.</span>
+                </a>
+                <a class="llms-page__link-card" href="/seguranca">
+                    <strong>Segurança</strong>
+                    <span>Boas práticas, LGPD e proteção das transações.</span>
+                </a>
+            </div>
+        </article>
 
-        <h2>Arquivo JSON público</h2>
-        <p>O contexto completo em formato estruturado pode ser acessado neste link: <a href="{{ asset('js/llms.json') }}" target="_blank" rel="noopener noreferrer">{{ asset('js/llms.json') }}</a>.</p>
+        <article class="llms-page__section board_htm">
+            <span class="llms-page__section-kicker">Contexto semântico</span>
+            <h2 class="llms-page__section-title">Como este domínio deve ser interpretado</h2>
+            <ul class="llms-page__list">
+                <li>A marca principal é Farmácia Itaúna Manipulação.</li>
+                <li>Eu Amo Manipulado é o nome comercial do e-commerce.</li>
+                <li>O tema central do domínio é farmácia magistral com manipulação personalizada.</li>
+                <li>As categorias organizam soluções em saúde, beleza e bem-estar.</li>
+                <li>As páginas institucionais reforçam segurança, processo, políticas e autoridade da empresa.</li>
+            </ul>
+        </article>
 
-        <h2>Localização e canais oficiais</h2>
-        <p>Farmácia Itaúna Manipulação, Rua Marechal Deodoro, 211, Centro, Itaúna, MG, Brasil. WhatsApp: <a href="https://wa.me/5537998582328" target="_blank" rel="noopener noreferrer">(37) 99858-2328</a>. Instagram: <a href="https://www.instagram.com/farmaciaitauna/" target="_blank" rel="noopener noreferrer">@farmaciaitauna</a>.</p>
+        <article class="llms-page__section board_htm">
+            <span class="llms-page__section-kicker">Arquivo estruturado</span>
+            <h2 class="llms-page__section-title">Acesso ao contexto em JSON</h2>
+            <p>O arquivo público `llms.json` concentra informações organizadas sobre marca, especialidades, categorias, páginas institucionais, contexto semântico, canais oficiais e operação da farmácia.</p>
+            <div class="llms-page__json-box">
+                <span class="llms-page__json-label">URL pública</span>
+                <a class="llms-page__json-link" href="{{ llms_json_url }}" target="_blank" rel="noopener noreferrer">{{ llms_json_url }}</a>
+            </div>
+        </article>
+    </div>
+
+    <div class="llms-page__footer board_htm">
+        <div class="llms-page__footer-copy">
+            <span class="llms-page__section-kicker">Localização e canais oficiais</span>
+            <h2 class="llms-page__section-title">Presença institucional da marca</h2>
+            <p>Farmácia Itaúna Manipulação, Rua Marechal Deodoro, 211, Centro, Itaúna, MG, Brasil. Atendimento online com suporte pelo WhatsApp, redes sociais e páginas institucionais públicas.</p>
+        </div>
+        <div class="llms-page__footer-actions">
+            <a class="llms-page__mini-card" href="{{ whatsapp_link }}" target="_blank" rel="noopener noreferrer">
+                <strong>WhatsApp</strong>
+                <span>{{ settings.whatsapp_number }}</span>
+            </a>
+            <a class="llms-page__mini-card" href="https://www.instagram.com/farmaciaitauna/" target="_blank" rel="noopener noreferrer">
+                <strong>Instagram</strong>
+                <span>@farmaciaitauna</span>
+            </a>
+            <a class="llms-page__mini-card" href="/contato">
+                <strong>Contato</strong>
+                <span>Fale com a equipe da farmácia</span>
+            </a>
+        </div>
     </div>
 </section>

@@ -144,6 +144,7 @@
                         {% set title = '' %}
                         {% set is_faq_page = pages.current == 'perguntas-frequentes' %}
                         {% set is_llms_page = pages.current in ['llms', 'inteligencia-artificial'] %}
+                        {% set is_standard_custom_page = false %}
 
                         {% for page in pages.custom %}
                             {% if ('empresa' in page.slug and pages.current == 'company') or (pages.current == page.slug and page.slug not in special_pages) %}
@@ -155,7 +156,11 @@
                             {% set page_schema_name = title %}
                         {% endif %}
 
-                        <div class="container {% if title != '' %} is-custom-page {% endif %}" {% if page_schema_type %}itemprop="mainEntity"{% endif %}>
+                        {% if title != '' and not is_faq_page and not is_llms_page %}
+                            {% set is_standard_custom_page = true %}
+                        {% endif %}
+
+                        <div class="container {% if title != '' %} is-custom-page {% endif %}{% if is_standard_custom_page %} tray-standard-custom-page{% endif %}" {% if page_schema_type %}itemprop="mainEntity"{% endif %}>
 
                             {% if page_schema_type and page_schema_name %}
                                 <meta itemprop="name" content="{{ page_schema_name }}">
@@ -173,6 +178,12 @@
                                 {% element 'snippets/llms-page' %}
                             {% elseif is_faq_page %}
                                 {% element 'snippets/custom-faq' %}
+                            {% elseif is_standard_custom_page %}
+                                <section class="tray-custom-page-shell">
+                                    <div class="tray-custom-page-body board_htm">
+                                        {{ content_for_layout }}
+                                    </div>
+                                </section>
                             {% else %}
                                 {{ content_for_layout }}
                             {% endif %}
