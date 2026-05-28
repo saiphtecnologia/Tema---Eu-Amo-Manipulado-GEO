@@ -1948,6 +1948,7 @@
             let heading = card.find('#noticia_dados h3').first();
             let link = heading.find('a').first();
             let rawText;
+            let linkText;
             let match;
 
             if(!heading.length || !link.length || heading.find('.news-card-date').length){
@@ -1958,7 +1959,8 @@
             match = rawText.match(/^(\d{2}\/\d{2}\/\d{4})\s*-\s*$/);
 
             if(match){
-                heading.prepend(`<span class="news-card-date">${match[1]}</span>`);
+                linkText = link.text().trim();
+                heading.html(`<span class="news-card-date">${match[1]}</span><a href="${link.attr('href')}">${linkText}</a>`);
             }
 
         },

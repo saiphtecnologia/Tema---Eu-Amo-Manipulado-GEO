@@ -11,6 +11,9 @@
             <div id="testimonial-slider" class="owl-carousel">
                 {% if settings.nome_dep_1 %}
                     <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_1)}}">
+                        </div>
                         <div class="conteudo">
                             <p class="description">
                                 {{settings.text_dep_1}}
@@ -21,6 +24,9 @@
                 {% endif %}
                 {% if settings.nome_dep_2 %}
                     <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_2)}}">
+                        </div>
                         <div class="conteudo">
                             <p class="description">
                                 {{settings.text_dep_2}}
@@ -31,6 +37,9 @@
                 {% endif %}
                 {% if settings.nome_dep_3 %}
                     <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_3)}}">
+                        </div>
                         <div class="conteudo">
                             <p class="description">
                                 {{settings.text_dep_3}}
@@ -41,6 +50,9 @@
                 {% endif %}
                 {% if settings.nome_dep_4 %}
                     <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_4)}}">
+                        </div>
                         <div class="conteudo">
                             <p class="description">
                                 {{settings.text_dep_4}}
@@ -51,6 +63,9 @@
                 {% endif %}
                 {% if settings.nome_dep_5 %}
                     <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_5)}}">
+                        </div>
                         <div class="conteudo">
                             <p class="description">
                                 {{settings.text_dep_5}}
@@ -61,6 +76,9 @@
                 {% endif %}
                 {% if settings.nome_dep_6 %}
                     <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_6)}}">
+                        </div>
                         <div class="conteudo">
                             <p class="description">
                                 {{settings.text_dep_6}}
@@ -71,6 +89,9 @@
                 {% endif %}
                 {% if settings.nome_dep_7 %}
                     <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_7)}}">
+                        </div>
                         <div class="conteudo">
                             <p class="description">
                                 {{settings.text_dep_7}}
@@ -81,6 +102,9 @@
                 {% endif %}
                 {% if settings.nome_dep_8 %}
                     <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_8)}}">
+                        </div>
                         <div class="conteudo">
                             <p class="description">
                                 {{settings.text_dep_8}}
@@ -91,6 +115,9 @@
                 {% endif %}
                 {% if settings.nome_dep_9 %}
                     <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_9)}}">
+                        </div>
                         <div class="conteudo">
                             <p class="description">
                                 {{settings.text_dep_9}}
@@ -101,6 +128,9 @@
                 {% endif %}
                 {% if settings.nome_dep_10 %}
                     <div class="testimonial">
+                        <div class="pic">
+                            <img src="{{asset(settings.dep_icon_10)}}">
+                        </div>
                         <div class="conteudo">
                             <p class="description">
                                 {{settings.text_dep_10}}
@@ -118,147 +148,95 @@
     #testimonial-slider {
         margin-top: 0.75rem;
         margin-bottom: 5rem;
-        overflow: hidden;
-    }
-
-    #testimonial-slider .owl-wrapper-outer {
-        overflow: hidden;
-    }
-
-    #testimonial-slider .owl-wrapper {
-        display: flex !important;
-    }
-
-    #testimonial-slider .owl-item {
-        display: flex;
-        padding: 0.35rem 0.4rem 1rem;
-        float: none;
-        box-sizing: border-box;
     }
 
     #testimonial-slider .testimonial {
+        border-right: 4px solid #134c47;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 0 15px 30px 15px;
+        overflow: hidden;
         position: relative;
         display: flex;
+        align-items: center;
+        gap: 20px;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1.1rem;
-        width: 100%;
-        min-height: 100%;
-        height: 100%;
-        padding: 1.6rem;
-        margin: 0;
+        min-height: 310px;
+        background: #fff;
+    }
+
+    #testimonial-slider .testimonial .pic {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
         overflow: hidden;
-        border: 1px solid rgba(26, 62, 46, 0.12);
-        border-radius: 24px;
-        background:
-            radial-gradient(circle at top right, rgba(169, 201, 182, 0.2), transparent 34%),
-            linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 246, 0.98));
-        box-shadow: 0 10px 10px rgba(36, 58, 46, 0.1);
+        border: 3px solid #134c47;
+        flex: 0 0 auto;
     }
 
-    #testimonial-slider .testimonial::before {
-        content: '';
-        position: absolute;
-        inset: 0 0 auto;
-        height: 4px;
-        background: linear-gradient(90deg, rgba(50, 122, 89, 0.95), rgba(123, 168, 145, 0.72));
-    }
-
-    #testimonial-slider .testimonial::after {
-        content: '\201C';
-        position: absolute;
-        top: 1.1rem;
-        right: 1.2rem;
-        font-size: 6.3rem;
-        line-height: 1;
-        color: rgba(50, 122, 89, 0.12);
-        font-family: Georgia, serif;
+    #testimonial-slider .testimonial .pic img {
+        width: 100%;
+        height: auto;
     }
 
     #testimonial-slider .testimonial .conteudo {
         display: flex;
         flex-direction: column;
-        gap: 0.95rem;
+        text-align: center;
         width: 100%;
         height: 100%;
-        text-align: left;
     }
 
     #testimonial-slider .testimonial .description {
-        margin: 0;
-        font-size: 0.97rem;
-        line-height: 1.75;
-        letter-spacing: 0;
-        color: rgba(27, 48, 38, 0.8);
-        max-width: 30vh;
+        font-size: 15px;
+        letter-spacing: 1px;
+        color: #6f6f6f;
+        line-height: 25px;
+        margin-bottom: 15px;
     }
 
     #testimonial-slider .testimonial .title {
-        display: inline-flex;
-        align-items: center;
+        display: inline-block;
         margin: auto 0 0;
-        font-size: 1rem;
+        font-size: 20px;
         font-weight: 700;
-        letter-spacing: 0.01em;
-        text-transform: none;
-        color: #1f4f3b;
-    }
-
-    #testimonial-slider .owl-controls {
-        margin-top: 0.25rem;
-    }
-
-    #testimonial-slider .owl-pagination {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.55rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #134c47;
     }
 
     #testimonial-slider .owl-theme .owl-controls .owl-page span,
     #testimonial-slider .owl-controls .owl-page span {
-        width: 11px;
-        height: 11px;
-        margin: 0;
-        border: 0;
-        background: rgba(50, 122, 89, 0.18) !important;
-        border-radius: 999px !important;
+        border: 2px solid #134c47;
+        background: #fff !important;
+        border-radius: 50px !important;
         opacity: 1;
-        transition: transform 0.2s ease, background 0.2s ease;
     }
 
     #testimonial-slider .owl-theme .owl-controls .owl-page.active span,
     #testimonial-slider .owl-theme .owl-controls .owl-page:hover span,
     #testimonial-slider .owl-controls .owl-page.active span,
     #testimonial-slider .owl-controls .owl-page:hover span {
-        background: #2d6b4f !important;
-        transform: scale(1.15);
+        background: #134c47 !important;
+        border-color: #134c47;
     }
 
     @media only screen and (max-width: 767px) {
-        #testimonial-slider .owl-item {
-            padding: 0 0.25rem 0.75rem;
-        }
-
         #testimonial-slider .testimonial {
-            gap: 0.95rem;
-            padding: 1.25rem;
-            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            min-height: 350px;
         }
 
-        #testimonial-slider .testimonial::after {
-            top: 0.95rem;
-            right: 1rem;
-            font-size: 2.7rem;
+        #testimonial-slider .testimonial .pic {
+            display: block;
+            position: static;
+            margin: 0 auto 15px;
         }
 
         #testimonial-slider .testimonial .description {
-            font-size: 0.92rem;
-            line-height: 1.65;
-        }
-
-        #testimonial-slider .testimonial .title {
-            font-size: 0.95rem;
+            max-width: none;
         }
     }
 </style>
