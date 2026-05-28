@@ -3223,7 +3223,7 @@ body.overflowed {
 
     .page-search .page-content,
     .page-catalog .page-content {
-        padding-top: 40px
+        padding-top: 10px
     }
 }
 
@@ -5957,6 +5957,19 @@ body.overflowed {
 
 .product .product-price .price.display-installment .product-installments .operadora {
     font-size: 0.875rem
+}
+
+.product .product-price .price.display-cash .product-installments .operadora,
+.product .product-price .price.display-cash .product-installments .txt-forma-pagamento,
+.product .product-price .price.display-installment .product-installments .operadora,
+.product .product-price .price.display-installment .product-installments .txt-forma-pagamento {
+    display: none !important
+}
+
+.product .product-price .price.display-cash .product-installments::after,
+.product .product-price .price.display-installment .product-installments::after {
+    content: ' no cart\00E3o de cr\00E9 dito' !important;
+    display: inline;
 }
 
 .product .product-price .product-message {
@@ -8755,7 +8768,7 @@ body.overflowed {
 }
 
 .product-wrapper .product-form .product-price-tray #produto_preco #info_preco::after {
-    content: 'no cart\00E3o de cr\00E9dito';
+    content: 'no cart\00E3o de cr\00E9 dito';
     font-size: 0.84rem;
     font-weight: 500;
     color: rgba(27, 48, 38, 0.72)
